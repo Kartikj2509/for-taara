@@ -12,7 +12,7 @@
 
   <meta
     name="theme-color"
-    content="#F4EFE6"
+    content="#F7F1EE"
   >
 
   <title>For Taara ♡</title>
@@ -27,7 +27,7 @@
 
   <link
     rel="preconnect"
-    href="https://fonts.gstatic.com"
+    href="https://fonts.googleapis.com"
     crossorigin
   >
 
@@ -40,49 +40,49 @@
   <style>
 
     /* =====================================================
-       PALETTE
+       AESTHETIC PALETTE
     ===================================================== */
 
     :root {
 
       --background:
-        #F4EFE6;
+        #F7F1EE;
 
-      --background-soft:
-        #F8F4EC;
+      --background-2:
+        #F2E7E3;
 
       --card:
-        #FCFAF5;
+        #FFFCF9;
 
       --ink:
-        #3D3A33;
+        #40383A;
 
       --ink-soft:
-        #69645A;
+        #706467;
 
       --muted:
-        #8A8478;
+        #94878A;
 
-      --sage:
-        #74806A;
+      --rose:
+        #B98588;
 
-      --sage-dark:
-        #59634F;
+      --rose-dark:
+        #8E626B;
 
-      --sage-soft:
-        #A8B09D;
+      --plum:
+        #66505B;
+
+      --plum-dark:
+        #55404B;
 
       --champagne:
-        #C9A86A;
+        #C7A878;
 
       --champagne-soft:
-        #E2D0A8;
+        #E5D5BC;
 
-      --brown:
-        #8A7664;
-
-      --border:
-        rgba(61,58,51,.11);
+      --line:
+        rgba(64,56,58,.11);
 
     }
 
@@ -103,29 +103,11 @@
 
     body {
 
-      margin: 0;
+      margin:
+        0;
 
-      min-height: 100vh;
-
-      background:
-
-        radial-gradient(
-          circle at 8% 5%,
-          rgba(255,255,255,.8),
-          transparent 27%
-        ),
-
-        radial-gradient(
-          circle at 94% 42%,
-          rgba(201,168,106,.10),
-          transparent 28%
-        ),
-
-        linear-gradient(
-          135deg,
-          #F8F4EC,
-          #F0EADF
-        );
+      min-height:
+        100vh;
 
       color:
         var(--ink);
@@ -134,6 +116,26 @@
         "DM Sans",
         system-ui,
         sans-serif;
+
+      background:
+
+        radial-gradient(
+          circle at 12% 4%,
+          rgba(255,255,255,.9),
+          transparent 27%
+        ),
+
+        radial-gradient(
+          circle at 92% 45%,
+          rgba(185,133,136,.10),
+          transparent 31%
+        ),
+
+        linear-gradient(
+          135deg,
+          var(--background),
+          var(--background-2)
+        );
 
       -webkit-font-smoothing:
         antialiased;
@@ -144,25 +146,31 @@
     }
 
 
-    /* Paper texture */
+    /* subtle paper texture */
 
     body::before {
 
-      content: "";
+      content:
+        "";
 
-      position: fixed;
+      position:
+        fixed;
 
-      inset: 0;
+      inset:
+        0;
 
-      pointer-events: none;
+      pointer-events:
+        none;
 
-      opacity: .09;
+      opacity:
+        .075;
 
       background-image:
 
         url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.18'/%3E%3C/svg%3E");
 
-      z-index: 50;
+      z-index:
+        50;
 
       mix-blend-mode:
         multiply;
@@ -190,7 +198,7 @@
 
       width:
         min(
-          calc(100% - 28px),
+          calc(100% - 26px),
           570px
         );
 
@@ -198,7 +206,7 @@
         0 auto;
 
       padding:
-        28px
+        25px
         0
         55px;
 
@@ -218,20 +226,20 @@
         18px;
 
       left:
-        -5px;
+        -6px;
 
       width:
-        118px;
+        112px;
 
       padding:
         14px
         12px;
 
       background:
-        #EEE5D5;
+        #EFE2DF;
 
       color:
-        #766F62;
+        #806F72;
 
       font-family:
         "Caveat",
@@ -247,7 +255,10 @@
         rotate(-6deg);
 
       box-shadow:
-        0 9px 22px rgba(70,60,45,.06);
+        0
+        9px
+        24px
+        rgba(76,57,60,.07);
 
       z-index:
         2;
@@ -264,7 +275,7 @@
         7px;
 
       color:
-        var(--champagne);
+        var(--rose);
 
       font-size:
         24px;
@@ -282,16 +293,16 @@
         absolute;
 
       top:
-        9px;
+        11px;
 
       right:
-        -2px;
+        -3px;
 
       color:
-        var(--sage);
+        var(--rose);
 
       font-size:
-        31px;
+        30px;
 
       line-height:
         .7;
@@ -349,13 +360,15 @@
     .headphones {
 
       width:
-        68px;
+        66px;
 
       height:
-        68px;
+        66px;
 
       margin:
-        0 auto 18px;
+        0
+        auto
+        18px;
 
       display:
         grid;
@@ -365,22 +378,25 @@
 
       border:
         1px solid
-        rgba(61,58,51,.10);
+        rgba(64,56,58,.10);
 
       border-radius:
         50%;
 
       background:
-        rgba(255,255,255,.55);
+        rgba(255,255,255,.60);
 
       color:
-        var(--sage);
+        var(--rose-dark);
 
       font-size:
-        30px;
+        29px;
 
       box-shadow:
-        0 10px 28px rgba(70,60,45,.06);
+        0
+        10px
+        28px
+        rgba(76,57,60,.07);
 
     }
 
@@ -416,7 +432,7 @@
     .hero h1 em {
 
       color:
-        var(--champagne);
+        var(--rose-dark);
 
       font-style:
         italic;
@@ -427,7 +443,9 @@
     .hero-text {
 
       margin:
-        22px auto 0;
+        22px
+        auto
+        0;
 
       max-width:
         350px;
@@ -490,7 +508,9 @@
         12px;
 
       margin:
-        30px auto 39px;
+        29px
+        auto
+        38px;
 
       color:
         var(--champagne);
@@ -523,7 +543,7 @@
     .section {
 
       margin-top:
-        34px;
+        33px;
 
       animation:
         fadeUp
@@ -546,10 +566,12 @@
         9px;
 
       margin:
-        0 5px 13px;
+        0
+        5px
+        13px;
 
       color:
-        #4B483F;
+        #51484A;
 
       font-family:
         "Playfair Display",
@@ -559,7 +581,7 @@
         17px;
 
       letter-spacing:
-        .105em;
+        .095em;
 
       text-transform:
         uppercase;
@@ -600,29 +622,30 @@
         100%;
 
       min-height:
-        112px;
+        104px;
 
       padding:
-        13px;
+        12px;
 
       gap:
-        14px;
+        13px;
 
       border:
-        1px solid
-        var(--border);
+        1px
+        solid
+        var(--line);
 
       border-radius:
-        24px;
+        23px;
 
       background:
-        rgba(252,250,245,.82);
+        rgba(255,252,249,.82);
 
       box-shadow:
         0
         12px
         30px
-        rgba(62,55,43,.065);
+        rgba(73,57,59,.065);
 
       backdrop-filter:
         blur(12px);
@@ -631,12 +654,6 @@
         transform .22s ease,
         box-shadow .22s ease;
 
-    }
-
-
-    .music-card + .music-card {
-      margin-top:
-        10px;
     }
 
 
@@ -649,12 +666,14 @@
         0
         17px
         35px
-        rgba(62,55,43,.09);
+        rgba(73,57,59,.10);
 
     }
 
 
-    /* Small heart */
+    /* =====================================================
+       SMALL HEART
+    ===================================================== */
 
     .music-card::after {
 
@@ -671,7 +690,7 @@
         12px;
 
       color:
-        rgba(89,99,79,.22);
+        rgba(102,80,91,.20);
 
       font-size:
         20px;
@@ -692,16 +711,16 @@
         relative;
 
       flex:
-        0 0 78px;
+        0 0 75px;
 
       width:
-        78px;
+        75px;
 
       height:
-        78px;
+        75px;
 
       border-radius:
-        18px;
+        17px;
 
       overflow:
         hidden;
@@ -710,21 +729,21 @@
 
         radial-gradient(
           circle at 68% 26%,
-          rgba(255,255,255,.42),
-          transparent 20%
+          rgba(255,255,255,.48),
+          transparent 21%
         ),
 
         linear-gradient(
           145deg,
-          #D8D2B8,
-          #9A9C7E
+          #D7C8BE,
+          #9D8787
         );
 
       box-shadow:
         0
         6px
         16px
-        rgba(60,55,42,.11);
+        rgba(73,57,59,.11);
 
     }
 
@@ -735,14 +754,14 @@
 
         radial-gradient(
           circle at 70% 27%,
-          rgba(255,255,255,.38),
-          transparent 20%
+          rgba(255,255,255,.48),
+          transparent 21%
         ),
 
         linear-gradient(
           145deg,
-          #D8C6A2,
-          #9B8F6C
+          #DCC9C3,
+          #A47E87
         );
 
     }
@@ -766,7 +785,7 @@
         center;
 
       color:
-        rgba(255,255,255,.88);
+        rgba(255,255,255,.91);
 
       font-family:
         "Playfair Display",
@@ -791,7 +810,8 @@
         1;
 
       padding:
-        2px 0;
+        2px
+        0;
 
     }
 
@@ -799,7 +819,7 @@
     .music-title {
 
       padding-right:
-        20px;
+        18px;
 
       color:
         var(--ink);
@@ -835,7 +855,7 @@
         5px;
 
       color:
-        #827C70;
+        #827579;
 
       font-family:
         "Caveat",
@@ -895,7 +915,7 @@
         var(--champagne);
 
       opacity:
-        .60;
+        .65;
 
     }
 
@@ -939,18 +959,27 @@
 
     /* =====================================================
        SPOTIFY BUTTON
+       PERFECTLY CENTERED
     ===================================================== */
 
     .spotify {
 
       flex:
-        0 0 46px;
+        0
+        0
+        45px;
 
       width:
-        46px;
+        45px;
 
       height:
-        46px;
+        45px;
+
+      padding:
+        0;
+
+      margin:
+        0;
 
       display:
         flex;
@@ -961,11 +990,14 @@
       justify-content:
         center;
 
+      border:
+        0;
+
       border-radius:
         50%;
 
       background:
-        var(--sage-dark);
+        var(--plum);
 
       color:
         white;
@@ -974,15 +1006,12 @@
         0
         7px
         17px
-        rgba(79,90,69,.20);
+        rgba(85,64,75,.22);
 
       transition:
         transform .2s ease,
         background .2s ease,
         box-shadow .2s ease;
-
-      z-index:
-        2;
 
     }
 
@@ -993,28 +1022,28 @@
         scale(1.06);
 
       background:
-        var(--sage);
+        var(--plum-dark);
 
       box-shadow:
         0
         9px
-        21px
-        rgba(79,90,69,.28);
+        22px
+        rgba(85,64,75,.30);
 
     }
 
 
     /* =====================================================
-       SPOTIFY LOGO
+       SPOTIFY ICON
     ===================================================== */
 
     .spotify-icon {
 
       width:
-        23px;
+        24px;
 
       height:
-        23px;
+        24px;
 
       display:
         flex;
@@ -1025,7 +1054,12 @@
       justify-content:
         center;
 
-      flex-shrink:
+      flex:
+        0
+        0
+        24px;
+
+      line-height:
         0;
 
     }
@@ -1037,10 +1071,13 @@
         block;
 
       width:
-        23px;
+        24px;
 
       height:
-        23px;
+        24px;
+
+      overflow:
+        visible;
 
     }
 
@@ -1052,22 +1089,23 @@
     .bottom-note {
 
       width:
-        150px;
+        145px;
 
       margin:
-        47px
+        44px
         0
         0
         auto;
 
       padding:
-        13px 15px;
+        13px
+        14px;
 
       background:
-        #EEE4D1;
+        #EFE1DD;
 
       color:
-        #766F63;
+        #796B6E;
 
       font-family:
         "Caveat",
@@ -1089,7 +1127,7 @@
         0
         9px
         23px
-        rgba(60,49,35,.05);
+        rgba(70,50,55,.055);
 
     }
 
@@ -1101,13 +1139,13 @@
     footer {
 
       padding-top:
-        43px;
+        42px;
 
       text-align:
         center;
 
       color:
-        #8E877A;
+        #928588;
 
       font-family:
         "Playfair Display",
@@ -1125,6 +1163,7 @@
 
     @media (max-width: 430px) {
 
+
       .page {
 
         width:
@@ -1141,13 +1180,13 @@
       .paper-note {
 
         top:
-          15px;
+          14px;
 
         left:
-          -8px;
+          -9px;
 
         width:
-          105px;
+          104px;
 
         padding:
           12px;
@@ -1158,22 +1197,16 @@
       }
 
 
-      .paper-note span {
-        font-size:
-          22px;
-      }
-
-
       .flowers {
 
         top:
           9px;
 
         right:
-          -10px;
+          -11px;
 
         font-size:
-          28px;
+          27px;
 
       }
 
@@ -1181,7 +1214,7 @@
       .hero {
 
         padding-top:
-          112px;
+          108px;
 
       }
 
@@ -1189,16 +1222,13 @@
       .headphones {
 
         width:
-          62px;
+          61px;
 
         height:
-          62px;
+          61px;
 
         font-size:
           27px;
-
-        margin-bottom:
-          16px;
 
       }
 
@@ -1206,7 +1236,7 @@
       .hero h1 {
 
         font-size:
-          53px;
+          52px;
 
       }
 
@@ -1219,18 +1249,15 @@
         font-size:
           13.5px;
 
-        line-height:
-          1.8;
-
       }
 
 
       .divider {
 
         margin:
-          28px
+          27px
           auto
-          34px;
+          33px;
 
       }
 
@@ -1239,7 +1266,7 @@
       .divider::after {
 
         width:
-          67px;
+          65px;
 
       }
 
@@ -1258,10 +1285,7 @@
           15px;
 
         letter-spacing:
-          .09em;
-
-        margin-bottom:
-          11px;
+          .075em;
 
       }
 
@@ -1269,7 +1293,7 @@
       .music-card {
 
         min-height:
-          98px;
+          96px;
 
         padding:
           10px;
@@ -1285,14 +1309,16 @@
 
       .album {
 
-        flex-basis:
-          70px;
+        flex:
+          0
+          0
+          69px;
 
         width:
-          70px;
+          69px;
 
         height:
-          70px;
+          69px;
 
         border-radius:
           16px;
@@ -1300,18 +1326,10 @@
       }
 
 
-      .album::after {
-
-        font-size:
-          31px;
-
-      }
-
-
       .music-title {
 
         font-size:
-          15.5px;
+          15px;
 
       }
 
@@ -1335,13 +1353,15 @@
       .spotify {
 
         flex:
-          0 0 43px;
+          0
+          0
+          42px;
 
         width:
-          43px;
+          42px;
 
         height:
-          43px;
+          42px;
 
       }
 
@@ -1349,10 +1369,13 @@
       .spotify-icon {
 
         width:
-          21px;
+          22px;
 
         height:
-          21px;
+          22px;
+
+        flex-basis:
+          22px;
 
       }
 
@@ -1360,10 +1383,10 @@
       .spotify-icon svg {
 
         width:
-          21px;
+          22px;
 
         height:
-          21px;
+          22px;
 
       }
 
@@ -1371,7 +1394,7 @@
       .bottom-note {
 
         width:
-          140px;
+          138px;
 
         margin-top:
           38px;
@@ -1382,10 +1405,11 @@
 
 
     /* =====================================================
-       SMALL PHONES
+       VERY SMALL PHONES
     ===================================================== */
 
     @media (max-width: 360px) {
+
 
       .page {
 
@@ -1398,7 +1422,7 @@
       .paper-note {
 
         left:
-          -14px;
+          -13px;
 
       }
 
@@ -1430,13 +1454,13 @@
       .album {
 
         flex-basis:
-          65px;
+          64px;
 
         width:
-          65px;
+          64px;
 
         height:
-          65px;
+          64px;
 
       }
 
@@ -1452,7 +1476,7 @@
       .music-description {
 
         font-size:
-          14.5px;
+          14px;
 
       }
 
@@ -1460,13 +1484,38 @@
       .spotify {
 
         flex-basis:
-          41px;
+          40px;
 
         width:
-          41px;
+          40px;
 
         height:
-          41px;
+          40px;
+
+      }
+
+
+      .spotify-icon {
+
+        width:
+          21px;
+
+        height:
+          21px;
+
+        flex-basis:
+          21px;
+
+      }
+
+
+      .spotify-icon svg {
+
+        width:
+          21px;
+
+        height:
+          21px;
 
       }
 
@@ -1512,7 +1561,7 @@
   <main class="page">
 
 
-    <!-- TOP NOTE -->
+    <!-- PAPER NOTE -->
 
     <div class="paper-note">
 
@@ -1577,7 +1626,7 @@
 
 
 
-    <!-- ================================================
+    <!-- =================================================
          PLAYLIST 1
     ================================================= -->
 
@@ -1606,12 +1655,8 @@
       >
 
 
-        <!-- ALBUM -->
-
         <div class="album"></div>
 
-
-        <!-- TEXT -->
 
         <div class="music-info">
 
@@ -1644,13 +1689,11 @@
         </div>
 
 
-        <!-- SPOTIFY -->
+        <!-- SPOTIFY BUTTON -->
 
         <div class="spotify">
 
-
           <span class="spotify-icon">
-
 
             <svg
               viewBox="0 0 24 24"
@@ -1658,6 +1701,7 @@
               aria-hidden="true"
             >
 
+              <!-- white Spotify circle -->
 
               <circle
                 cx="12"
@@ -1667,47 +1711,50 @@
               />
 
 
+              <!-- Spotify curve 1 -->
+
               <path
-                d="M7.2 9.35
-                   C10.25 8.42
-                   14.1 8.57
+                d="M7.25 9.35
+                   C10.30 8.42
+                   14.12 8.57
                    17.05 9.95"
                 fill="none"
-                stroke="#59634F"
+                stroke="#66505B"
                 stroke-width="1.55"
                 stroke-linecap="round"
               />
 
 
+              <!-- Spotify curve 2 -->
+
               <path
-                d="M7.65 12.25
-                   C10.15 11.52
-                   13.55 11.7
+                d="M7.70 12.25
+                   C10.20 11.52
+                   13.55 11.70
                    15.95 12.78"
                 fill="none"
-                stroke="#59634F"
+                stroke="#66505B"
                 stroke-width="1.45"
                 stroke-linecap="round"
               />
 
 
+              <!-- Spotify curve 3 -->
+
               <path
-                d="M8.25 15.05
-                   C10.3 14.58
-                   12.8 14.7
-                   14.65 15.5"
+                d="M8.30 15.05
+                   C10.32 14.58
+                   12.78 14.70
+                   14.65 15.50"
                 fill="none"
-                stroke="#59634F"
+                stroke="#66505B"
                 stroke-width="1.35"
                 stroke-linecap="round"
               />
 
-
             </svg>
 
-
           </span>
-
 
         </div>
 
@@ -1719,7 +1766,7 @@
 
 
 
-    <!-- ================================================
+    <!-- =================================================
          PLAYLIST 2
     ================================================= -->
 
@@ -1728,14 +1775,11 @@
 
       <h2 class="section-heading">
 
-
         <span class="emoji">
           🌼
         </span>
 
-
         Very Taara
-
 
       </h2>
 
@@ -1751,12 +1795,8 @@
       >
 
 
-        <!-- ALBUM -->
-
         <div class="album second"></div>
 
-
-        <!-- TEXT -->
 
         <div class="music-info">
 
@@ -1789,20 +1829,17 @@
         </div>
 
 
-        <!-- SPOTIFY -->
+        <!-- SPOTIFY BUTTON -->
 
         <div class="spotify">
 
-
           <span class="spotify-icon">
-
 
             <svg
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
               aria-hidden="true"
             >
-
 
               <circle
                 cx="12"
@@ -1813,46 +1850,43 @@
 
 
               <path
-                d="M7.2 9.35
-                   C10.25 8.42
-                   14.1 8.57
+                d="M7.25 9.35
+                   C10.30 8.42
+                   14.12 8.57
                    17.05 9.95"
                 fill="none"
-                stroke="#59634F"
+                stroke="#66505B"
                 stroke-width="1.55"
                 stroke-linecap="round"
               />
 
 
               <path
-                d="M7.65 12.25
-                   C10.15 11.52
-                   13.55 11.7
+                d="M7.70 12.25
+                   C10.20 11.52
+                   13.55 11.70
                    15.95 12.78"
                 fill="none"
-                stroke="#59634F"
+                stroke="#66505B"
                 stroke-width="1.45"
                 stroke-linecap="round"
               />
 
 
               <path
-                d="M8.25 15.05
-                   C10.3 14.58
-                   12.8 14.7
-                   14.65 15.5"
+                d="M8.30 15.05
+                   C10.32 14.58
+                   12.78 14.70
+                   14.65 15.50"
                 fill="none"
-                stroke="#59634F"
+                stroke="#66505B"
                 stroke-width="1.35"
                 stroke-linecap="round"
               />
 
-
             </svg>
 
-
           </span>
-
 
         </div>
 
