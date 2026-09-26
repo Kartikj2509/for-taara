@@ -4,196 +4,568 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="theme-color" content="#fbf8f0" />
+
   <title>For Taara ♫</title>
-  <meta name="description" content="A little music from PB, for Taara." />
+
+  <meta
+    name="description"
+    content="A little music from PB, for Taara."
+  />
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap"
+    rel="stylesheet"
+  />
+
   <style>
+
     :root {
       --paper: #fbf8f0;
       --ink: #24221e;
       --muted: #817b70;
       --line: rgba(36,34,30,.11);
+
       --butter: #f5df83;
       --butter-soft: #fff4c7;
-      --card: rgba(255,255,255,.68);
+
+      --card: rgba(255,255,255,.72);
     }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       min-height: 100vh;
+
       color: var(--ink);
+
       background:
-        radial-gradient(circle at 15% 8%, rgba(245,223,131,.24), transparent 28%),
-        radial-gradient(circle at 90% 82%, rgba(245,223,131,.16), transparent 30%),
+        radial-gradient(
+          circle at 15% 8%,
+          rgba(245,223,131,.24),
+          transparent 28%
+        ),
+        radial-gradient(
+          circle at 90% 82%,
+          rgba(245,223,131,.16),
+          transparent 30%
+        ),
         var(--paper);
+
       font-family: "DM Sans", system-ui, sans-serif;
+
       -webkit-font-smoothing: antialiased;
     }
-    a { color: inherit; text-decoration: none; }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* MAIN CONTAINER */
+
     .wrap {
       width: min(100% - 32px, 560px);
+
       margin: 0 auto;
-      padding: 54px 0 38px;
+
+      padding:
+        54px
+        0
+        38px;
     }
+
+    /* INTRO */
+
     .intro {
       text-align: center;
+
       margin-bottom: 42px;
+
       animation: rise .7s ease both;
     }
+
     .music-mark {
       display: grid;
       place-items: center;
+
       width: 48px;
       height: 48px;
+
       margin: 0 auto 20px;
+
       border-radius: 50%;
+
       background: var(--butter-soft);
+
       font-size: 20px;
     }
+
     h1 {
       margin: 0;
-      font: 600 clamp(38px, 11vw, 56px)/1.02 "Playfair Display", serif;
+
+      font:
+        600
+        clamp(38px, 11vw, 56px)
+        / 1.02
+        "Playfair Display",
+        serif;
+
       letter-spacing: -.035em;
     }
+
     .sub {
       margin: 13px auto 0;
+
       color: var(--muted);
+
       font-size: 14px;
+
       line-height: 1.7;
-      max-width: 310px;
+
+      max-width: 330px;
     }
+
+    /* SECTION */
+
     .section {
       margin-top: 30px;
+
       animation: rise .7s ease both;
     }
-    .section:nth-of-type(2) { animation-delay: .1s; }
+
+    .section:nth-of-type(2) {
+      animation-delay: .1s;
+    }
+
     .section-label {
       display: flex;
+
       align-items: center;
+
       gap: 9px;
-      margin: 0 5px 13px;
+
+      margin:
+        0
+        5px
+        13px;
+
       color: #555046;
+
       font-size: 12px;
+
       font-weight: 600;
+
       letter-spacing: .12em;
+
       text-transform: uppercase;
     }
+
+    /* PLAYLIST CARD */
+
     .playlist {
       position: relative;
+
       display: flex;
+
       align-items: center;
+
       gap: 15px;
+
       width: 100%;
+
       padding: 15px;
-      border: 1px solid var(--line);
+
+      border:
+        1px
+        solid
+        var(--line);
+
       border-radius: 20px;
+
       background: var(--card);
-      box-shadow: 0 10px 30px rgba(35,31,24,.045);
+
+      box-shadow:
+        0
+        12px
+        34px
+        rgba(35,31,24,.055);
+
       backdrop-filter: blur(12px);
-      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+
+      transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        background .2s ease;
     }
-    .playlist + .playlist { margin-top: 10px; }
+
+    .playlist + .playlist {
+      margin-top: 10px;
+    }
+
     .playlist:hover {
       transform: translateY(-2px);
-      box-shadow: 0 15px 36px rgba(35,31,24,.08);
+
+      box-shadow:
+        0
+        16px
+        38px
+        rgba(35,31,24,.08);
     }
+
+    /* ALBUM ART */
+
     .art {
       flex: 0 0 58px;
+
       width: 58px;
       height: 58px;
+
       border-radius: 15px;
+
       display: grid;
+
       place-items: center;
-      background: linear-gradient(145deg, #fff7cf, #f1d66d);
-      box-shadow: inset 0 0 0 1px rgba(36,34,30,.06);
+
+      background:
+        linear-gradient(
+          145deg,
+          #fff7cf,
+          #f1d66d
+        );
+
+      box-shadow:
+        inset
+        0
+        0
+        0
+        1px
+        rgba(36,34,30,.06);
+
       font-size: 22px;
     }
-    .info { min-width: 0; flex: 1; }
+
+    /* TEXT */
+
+    .info {
+      min-width: 0;
+
+      flex: 1;
+    }
+
     .title {
       font-size: 15px;
+
       font-weight: 600;
+
       white-space: nowrap;
+
       overflow: hidden;
+
       text-overflow: ellipsis;
     }
+
     .desc {
       margin-top: 4px;
+
       color: var(--muted);
+
       font-size: 12px;
     }
+
+    /* SPOTIFY BUTTON */
+
     .spotify {
-      display: grid;
-      place-items: center;
-      flex: 0 0 42px;
-      width: 42px;
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 7px;
+
+      flex: 0 0 auto;
+
+      min-width: 42px;
+
       height: 42px;
-      border-radius: 50%;
+
+      padding:
+        0
+        13px;
+
+      border-radius: 999px;
+
       background: #1ed760;
+
       color: white;
-      font-size: 17px;
-      box-shadow: 0 5px 14px rgba(30,215,96,.18);
-      transition: transform .18s ease;
+
+      font-size: 15px;
+
+      font-weight: 600;
+
+      box-shadow:
+        0
+        5px
+        14px
+        rgba(30,215,96,.18);
+
+      transition:
+        transform .18s ease,
+        box-shadow .18s ease;
     }
-    .playlist:active .spotify { transform: scale(.93); }
+
+    .spotify small {
+      font:
+        600
+        11px
+        / 1
+        "DM Sans",
+        system-ui,
+        sans-serif;
+    }
+
+    .playlist:hover .spotify {
+      box-shadow:
+        0
+        7px
+        18px
+        rgba(30,215,96,.25);
+    }
+
+    .playlist:active .spotify {
+      transform: scale(.93);
+    }
+
+    /* HINT */
+
     .hint {
-      margin: 20px 4px 0;
+      margin:
+        20px
+        4px
+        0;
+
       text-align: center;
+
       color: #aaa398;
+
       font-size: 11px;
     }
+
+    /* FOOTER */
+
     footer {
-      padding: 48px 0 10px;
+      padding:
+        48px
+        0
+        10px;
+
       text-align: center;
+
       color: #9a9489;
-      font: 500 18px/1 "Playfair Display", serif;
+
+      font:
+        500
+        18px
+        / 1
+        "Playfair Display",
+        serif;
     }
+
+    /* ANIMATION */
+
     @keyframes rise {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
+
+      from {
+        opacity: 0;
+
+        transform:
+          translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+
+        transform:
+          translateY(0);
+      }
+
     }
+
+    /* SMALL PHONES */
+
     @media (max-width: 380px) {
-      .wrap { width: min(100% - 24px, 560px); padding-top: 42px; }
-      .playlist { padding: 13px; }
+
+      .wrap {
+        width:
+          min(
+            100% - 24px,
+            560px
+          );
+
+        padding-top: 42px;
+      }
+
+      .playlist {
+        padding: 13px;
+      }
+
+      .spotify {
+        padding: 0 11px;
+      }
+
+      .spotify small {
+        display: none;
+      }
+
     }
+
   </style>
 </head>
+
+
 <body>
+
   <main class="wrap">
+
+    <!-- INTRO -->
+
     <header class="intro">
-      <div class="music-mark">♫</div>
-      <h1>For Taara</h1>
-      <p class="sub">some songs for you.<br>that's all. 🤍</p>
+
+      <div class="music-mark">
+        ♫
+      </div>
+
+      <h1>
+        For Taara
+      </h1>
+
+      <p class="sub">
+        some songs that made me think of you.<br>
+        and some that just sound like you. 🤍
+      </p>
+
     </header>
 
-    <section class="section">
-      <div class="section-label">🤍 These remind me of you</div>
-      <a class="playlist" href="https://open.spotify.com/playlist/4NOPqOwIbdfL8w1OxM9pPs" target="_blank" rel="noopener noreferrer">
-        <div class="art">♫</div>
-        <div class="info">
-          <div class="title">Reminds Me of You🤍</div>
-          <div class="desc">songs that make me think of you</div>
-        </div>
-        <div class="spotify" aria-label="Open in Spotify">▶</div>
-      </a>
-    </section>
+
+    <!-- REMINDS ME OF YOU -->
 
     <section class="section">
-      <div class="section-label">🌼 Very Taara</div>
-      <a class="playlist" href="https://open.spotify.com/playlist/0m9MUBTC2tcGojcFkEGVoW" target="_blank" rel="noopener noreferrer">
-        <div class="art">✦</div>
-        <div class="info">
-          <div class="title">Veryyy TaaraaaLikee</div>
-          <div class="desc">songs that just feel like you</div>
+
+      <div class="section-label">
+        🤍 THESE REMIND ME OF YOU
+      </div>
+
+
+      <a
+        class="playlist"
+        href="https://open.spotify.com/playlist/4NOPqOwIbdfL8w1OxM9pPs"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+
+        <div class="art">
+          ♫
         </div>
-        <div class="spotify" aria-label="Open in Spotify">▶</div>
+
+
+        <div class="info">
+
+          <div class="title">
+            Reminds Me of You🤍
+          </div>
+
+          <div class="desc">
+            songs that make me think of you
+          </div>
+
+        </div>
+
+
+        <div
+          class="spotify"
+          aria-label="Open in Spotify"
+        >
+          <span>▶</span>
+          <small>Spotify</small>
+        </div>
+
       </a>
+
     </section>
 
-    <p class="hint">tap a playlist to listen on Spotify</p>
-    <footer>PB ♡</footer>
+
+
+    <!-- VERY TAARA -->
+
+    <section class="section">
+
+      <div class="section-label">
+        🌼 VERY TAARA
+      </div>
+
+
+      <a
+        class="playlist"
+        href="https://open.spotify.com/playlist/0m9MUBTC2tcGojcFkEGVoW"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+
+        <div class="art">
+          ✦
+        </div>
+
+
+        <div class="info">
+
+          <div class="title">
+            Veryyy TaaraaaLikee
+          </div>
+
+          <div class="desc">
+            songs that just feel like you
+          </div>
+
+        </div>
+
+
+        <div
+          class="spotify"
+          aria-label="Open in Spotify"
+        >
+          <span>▶</span>
+          <small>Spotify</small>
+        </div>
+
+      </a>
+
+    </section>
+
+
+
+    <!-- BOTTOM -->
+
+    <p class="hint">
+      tap a playlist to listen on Spotify
+    </p>
+
+
+    <footer>
+      PB ♡
+    </footer>
+
   </main>
+
 </body>
 </html>
