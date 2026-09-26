@@ -3,36 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="theme-color" content="#fbf8f0" />
+  <meta name="theme-color" content="#f5efe3" />
 
-  <title>For Taara ♫</title>
+  <title>For Taara ♡</title>
 
-  <meta
-    name="description"
-    content="A little music from PB, for Taara."
-  />
-
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap"
     rel="stylesheet"
   />
 
   <style>
 
+    /* =====================================================
+       BASE
+    ===================================================== */
+
     :root {
-      --paper: #fbf8f0;
-      --ink: #24221e;
-      --muted: #817b70;
-      --line: rgba(36,34,30,.11);
+      --paper: #f5efe3;
+      --paper-light: #fbf7ef;
 
-      --butter: #f5df83;
-      --butter-soft: #fff4c7;
+      --ink: #292820;
+      --soft-ink: #68645a;
+      --muted: #928c7e;
 
-      --card: rgba(255,255,255,.72);
+      --olive: #7d8658;
+      --olive-dark: #667044;
+
+      --gold: #c89b43;
+      --gold-soft: #ead7a9;
+
+      --white: rgba(255,255,255,.67);
+
+      --border: rgba(75,69,55,.13);
     }
 
     * {
@@ -49,22 +54,49 @@
 
       color: var(--ink);
 
+      font-family:
+        "DM Sans",
+        system-ui,
+        sans-serif;
+
       background:
         radial-gradient(
-          circle at 15% 8%,
-          rgba(245,223,131,.24),
-          transparent 28%
+          circle at 10% 5%,
+          rgba(255,255,255,.75),
+          transparent 24%
         ),
         radial-gradient(
-          circle at 90% 82%,
-          rgba(245,223,131,.16),
+          circle at 90% 35%,
+          rgba(231,213,170,.35),
           transparent 30%
         ),
-        var(--paper);
-
-      font-family: "DM Sans", system-ui, sans-serif;
+        linear-gradient(
+          135deg,
+          #f7f1e6,
+          #eee6d7
+        );
 
       -webkit-font-smoothing: antialiased;
+
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+
+      position: fixed;
+
+      inset: 0;
+
+      pointer-events: none;
+
+      opacity: .18;
+
+      background-image:
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.18'/%3E%3C/svg%3E");
+
+      z-index: 20;
+      mix-blend-mode: multiply;
     }
 
     a {
@@ -72,220 +104,559 @@
       text-decoration: none;
     }
 
-    /* MAIN CONTAINER */
 
-    .wrap {
-      width: min(100% - 32px, 560px);
+    /* =====================================================
+       PAGE
+    ===================================================== */
 
-      margin: 0 auto;
+    .page {
+      position: relative;
+
+      width: min(
+        100% - 30px,
+        560px
+      );
+
+      margin: auto;
 
       padding:
-        54px
+        28px
         0
-        38px;
+        55px;
     }
 
-    /* INTRO */
 
-    .intro {
+    /* =====================================================
+       DECORATIVE PAPER
+    ===================================================== */
+
+    .paper-note {
+      position: absolute;
+
+      top: 20px;
+      left: -8px;
+
+      width: 130px;
+
+      padding: 17px 13px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #efe5d2,
+          #f7efe2
+        );
+
+      color: #777064;
+
+      font-family: "Caveat", cursive;
+
+      font-size: 20px;
+
+      line-height: 1.05;
+
+      transform: rotate(-7deg);
+
+      box-shadow:
+        0 10px 25px rgba(50,42,30,.08);
+
+      z-index: 2;
+    }
+
+    .paper-note::after {
+      content: "";
+
+      position: absolute;
+
+      bottom: -7px;
+      right: -5px;
+
+      width: 70px;
+      height: 18px;
+
+      background: rgba(219,198,156,.5);
+
+      transform: rotate(4deg);
+    }
+
+    .paper-note span {
+      display: block;
+
+      margin-top: 8px;
+
+      font-size: 27px;
+    }
+
+
+    /* =====================================================
+       FLOWERS
+    ===================================================== */
+
+    .flowers {
+      position: absolute;
+
+      top: 5px;
+      right: -8px;
+
+      width: 110px;
+
+      color: #9d8957;
+
+      font-size: 38px;
+
+      line-height: .7;
+
+      transform: rotate(9deg);
+
+      opacity: .72;
+    }
+
+    .flowers small {
+      display: block;
+
+      margin-left: 38px;
+
+      font-size: 18px;
+
+      transform: rotate(-12deg);
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .hero {
       text-align: center;
 
-      margin-bottom: 42px;
+      padding-top: 128px;
 
-      animation: rise .7s ease both;
+      animation:
+        fadeUp
+        .9s
+        ease
+        both;
     }
 
-    .music-mark {
+    .headphones {
+      width: 76px;
+      height: 76px;
+
+      margin:
+        0
+        auto
+        17px;
+
       display: grid;
+
       place-items: center;
-
-      width: 48px;
-      height: 48px;
-
-      margin: 0 auto 20px;
 
       border-radius: 50%;
 
-      background: var(--butter-soft);
+      background:
+        rgba(255,255,255,.5);
 
-      font-size: 20px;
+      border:
+        1px
+        solid
+        rgba(83,76,60,.12);
+
+      font-size: 37px;
+
+      box-shadow:
+        0
+        10px
+        30px
+        rgba(70,60,40,.07);
     }
 
-    h1 {
+    .hero h1 {
       margin: 0;
 
-      font:
-        600
-        clamp(38px, 11vw, 56px)
-        / 1.02
+      font-family:
         "Playfair Display",
         serif;
 
-      letter-spacing: -.035em;
+      font-size:
+        clamp(
+          52px,
+          15vw,
+          82px
+        );
+
+      line-height: .95;
+
+      letter-spacing: -.055em;
+
+      font-weight: 500;
     }
 
-    .sub {
-      margin: 13px auto 0;
+    .hero h1 em {
+      color: var(--gold);
 
-      color: var(--muted);
-
-      font-size: 14px;
-
-      line-height: 1.7;
-
-      max-width: 330px;
+      font-style: italic;
     }
 
-    /* SECTION */
+    .hero-text {
+      margin:
+        23px
+        auto
+        0;
 
-    .section {
-      margin-top: 30px;
+      max-width: 370px;
 
-      animation: rise .7s ease both;
+      color: #666157;
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size: 15px;
+
+      line-height: 1.9;
+
+      letter-spacing: .05em;
     }
 
-    .section:nth-of-type(2) {
-      animation-delay: .1s;
+    .hero-text::after {
+      content: "♡";
+
+      display: block;
+
+      margin-top: 17px;
+
+      color: var(--gold);
+
+      font-size: 24px;
     }
 
-    .section-label {
+
+    /* =====================================================
+       DIVIDER
+    ===================================================== */
+
+    .divider {
       display: flex;
 
       align-items: center;
 
-      gap: 9px;
+      justify-content: center;
+
+      gap: 13px;
+
+      margin:
+        30px
+        auto
+        42px;
+
+      color: var(--gold);
+    }
+
+    .divider::before,
+    .divider::after {
+      content: "";
+
+      width: 105px;
+
+      height: 1px;
+
+      background:
+        linear-gradient(
+          to right,
+          transparent,
+          var(--gold-soft)
+        );
+    }
+
+    .divider::after {
+      background:
+        linear-gradient(
+          to left,
+          transparent,
+          var(--gold-soft)
+        );
+    }
+
+
+    /* =====================================================
+       SECTION
+    ===================================================== */
+
+    .section {
+      margin-top: 37px;
+
+      animation:
+        fadeUp
+        .9s
+        ease
+        both;
+    }
+
+    .section:nth-of-type(2) {
+      animation-delay: .12s;
+    }
+
+    .section-heading {
+      display: flex;
+
+      align-items: center;
+
+      gap: 10px;
 
       margin:
         0
-        5px
-        13px;
+        7px
+        14px;
 
-      color: #555046;
+      color: #4d4a40;
 
-      font-size: 12px;
+      font-family:
+        "Playfair Display",
+        serif;
 
-      font-weight: 600;
+      font-size: 17px;
 
-      letter-spacing: .12em;
+      letter-spacing: .13em;
 
       text-transform: uppercase;
     }
 
-    /* PLAYLIST CARD */
+    .section-heading .flower {
+      font-size: 21px;
+    }
 
-    .playlist {
+
+    /* =====================================================
+       MUSIC CARD
+    ===================================================== */
+
+    .music-card {
       position: relative;
 
       display: flex;
 
       align-items: center;
 
-      gap: 15px;
+      gap: 16px;
 
       width: 100%;
 
-      padding: 15px;
+      padding: 14px;
 
       border:
         1px
         solid
-        var(--line);
+        var(--border);
 
-      border-radius: 20px;
+      border-radius: 25px;
 
-      background: var(--card);
+      background:
+        linear-gradient(
+          135deg,
+          rgba(255,255,255,.76),
+          rgba(249,244,234,.57)
+        );
 
       box-shadow:
         0
-        12px
-        34px
-        rgba(35,31,24,.055);
+        13px
+        35px
+        rgba(65,57,43,.075);
 
-      backdrop-filter: blur(12px);
+      backdrop-filter: blur(15px);
+
+      overflow: hidden;
 
       transition:
-        transform .2s ease,
-        box-shadow .2s ease,
-        background .2s ease;
+        transform .25s ease,
+        box-shadow .25s ease;
     }
 
-    .playlist + .playlist {
-      margin-top: 10px;
-    }
-
-    .playlist:hover {
-      transform: translateY(-2px);
+    .music-card:hover {
+      transform: translateY(-3px);
 
       box-shadow:
         0
-        16px
-        38px
-        rgba(35,31,24,.08);
+        18px
+        42px
+        rgba(65,57,43,.11);
     }
 
-    /* ALBUM ART */
+    .music-card::after {
+      content: "♡";
 
-    .art {
-      flex: 0 0 58px;
+      position: absolute;
 
-      width: 58px;
-      height: 58px;
+      top: 10px;
+      right: 15px;
 
-      border-radius: 15px;
+      color: rgba(115,106,84,.25);
+
+      font-size: 23px;
+    }
+
+
+    /* =====================================================
+       ALBUM IMAGE
+    ===================================================== */
+
+    .album {
+      position: relative;
+
+      flex: 0 0 84px;
+
+      width: 84px;
+      height: 84px;
+
+      border-radius: 19px;
+
+      overflow: hidden;
+
+      background:
+        linear-gradient(
+          145deg,
+          #e7d7b6,
+          #9b9670
+        );
+
+      box-shadow:
+        0
+        7px
+        18px
+        rgba(50,43,30,.12);
+    }
+
+    .album::before {
+      content: "";
+
+      position: absolute;
+
+      inset: 0;
+
+      background:
+        radial-gradient(
+          circle at 70% 30%,
+          rgba(255,255,255,.5),
+          transparent 22%
+        ),
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,.25),
+          transparent
+        );
+    }
+
+    .album::after {
+      content: "♫";
+
+      position: absolute;
+
+      inset: 0;
 
       display: grid;
 
       place-items: center;
 
-      background:
-        linear-gradient(
-          145deg,
-          #fff7cf,
-          #f1d66d
-        );
+      color: rgba(255,255,255,.82);
 
-      box-shadow:
-        inset
-        0
-        0
-        0
-        1px
-        rgba(36,34,30,.06);
+      font-family:
+        "Playfair Display",
+        serif;
 
-      font-size: 22px;
+      font-size: 36px;
     }
 
-    /* TEXT */
 
-    .info {
+    /* =====================================================
+       CARD TEXT
+    ===================================================== */
+
+    .music-info {
       min-width: 0;
 
       flex: 1;
+
+      padding-right: 2px;
     }
 
-    .title {
-      font-size: 15px;
+    .music-title {
+      color: #302e28;
 
-      font-weight: 600;
+      font-family:
+        "Playfair Display",
+        serif;
 
-      white-space: nowrap;
+      font-size: 18px;
 
-      overflow: hidden;
+      font-weight: 500;
 
-      text-overflow: ellipsis;
+      line-height: 1.25;
     }
 
-    .desc {
-      margin-top: 4px;
+    .music-description {
+      margin-top: 6px;
 
-      color: var(--muted);
+      color: #858073;
 
-      font-size: 12px;
+      font-family:
+        "Caveat",
+        cursive;
+
+      font-size: 18px;
+
+      line-height: 1.1;
     }
 
-    /* SPOTIFY BUTTON */
+
+    /* =====================================================
+       FAKE WAVEFORM
+    ===================================================== */
+
+    .wave {
+      display: flex;
+
+      align-items: center;
+
+      gap: 3px;
+
+      height: 18px;
+
+      margin-top: 8px;
+    }
+
+    .wave span {
+      display: block;
+
+      width: 3px;
+
+      border-radius: 5px;
+
+      background: var(--gold);
+
+      opacity: .45;
+    }
+
+    .wave span:nth-child(1) { height: 6px; }
+    .wave span:nth-child(2) { height: 12px; }
+    .wave span:nth-child(3) { height: 17px; }
+    .wave span:nth-child(4) { height: 9px; }
+    .wave span:nth-child(5) { height: 14px; }
+    .wave span:nth-child(6) { height: 6px; }
+    .wave span:nth-child(7) { height: 11px; }
+    .wave span:nth-child(8) { height: 16px; }
+    .wave span:nth-child(9) { height: 7px; }
+
+
+    /* =====================================================
+       SPOTIFY BUTTON
+    ===================================================== */
 
     .spotify {
+      flex:
+        0
+        0
+        auto;
+
       display: flex;
 
       align-items: center;
@@ -294,103 +665,270 @@
 
       gap: 7px;
 
-      flex: 0 0 auto;
+      min-width: 106px;
 
-      min-width: 42px;
-
-      height: 42px;
+      height: 43px;
 
       padding:
         0
-        13px;
+        14px;
 
       border-radius: 999px;
 
-      background: #1ed760;
+      background:
+        linear-gradient(
+          135deg,
+          var(--olive),
+          var(--olive-dark)
+        );
 
       color: white;
 
-      font-size: 15px;
-
-      font-weight: 600;
-
-      box-shadow:
-        0
-        5px
-        14px
-        rgba(30,215,96,.18);
-
-      transition:
-        transform .18s ease,
-        box-shadow .18s ease;
-    }
-
-    .spotify small {
-      font:
-        600
-        11px
-        / 1
-        "DM Sans",
-        system-ui,
-        sans-serif;
-    }
-
-    .playlist:hover .spotify {
       box-shadow:
         0
         7px
-        18px
-        rgba(30,215,96,.25);
+        17px
+        rgba(91,98,58,.2);
+
+      font-size: 13px;
+
+      font-weight: 600;
+
+      transition:
+        transform .2s ease,
+        box-shadow .2s ease;
     }
 
-    .playlist:active .spotify {
-      transform: scale(.93);
+    .spotify-icon {
+      font-size: 16px;
     }
 
-    /* HINT */
+    .spotify:hover {
+      transform: translateY(-1px);
 
-    .hint {
+      box-shadow:
+        0
+        10px
+        22px
+        rgba(91,98,58,.28);
+    }
+
+
+    /* =====================================================
+       BOTTOM NOTE
+    ===================================================== */
+
+    .bottom-note {
+      width: 145px;
+
       margin:
-        20px
-        4px
-        0;
-
-      text-align: center;
-
-      color: #aaa398;
-
-      font-size: 11px;
-    }
-
-    /* FOOTER */
-
-    footer {
-      padding:
         48px
         0
-        10px;
+        0
+        auto;
+
+      padding: 14px;
+
+      color: #81796a;
+
+      background:
+        #efe4d0;
+
+      font-family:
+        "Caveat",
+        cursive;
+
+      font-size: 20px;
+
+      line-height: 1.05;
 
       text-align: center;
 
-      color: #9a9489;
+      transform:
+        rotate(5deg);
 
-      font:
-        500
-        18px
-        / 1
-        "Playfair Display",
-        serif;
+      box-shadow:
+        0
+        10px
+        25px
+        rgba(60,49,35,.06);
     }
 
-    /* ANIMATION */
 
-    @keyframes rise {
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    footer {
+      padding-top: 45px;
+
+      text-align: center;
+
+      color: #8f887b;
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size: 22px;
+    }
+
+
+    /* =====================================================
+       MOBILE
+    ===================================================== */
+
+    @media (max-width: 430px) {
+
+      .page {
+        width:
+          calc(
+            100% - 24px
+          );
+
+        padding-bottom: 45px;
+      }
+
+      .paper-note {
+        width: 112px;
+
+        font-size: 18px;
+      }
+
+      .flowers {
+        right: -14px;
+
+        font-size: 31px;
+      }
+
+      .hero {
+        padding-top: 120px;
+      }
+
+      .headphones {
+        width: 67px;
+        height: 67px;
+
+        font-size: 31px;
+      }
+
+      .hero h1 {
+        font-size: 54px;
+      }
+
+      .hero-text {
+        font-size: 14px;
+
+        max-width: 330px;
+      }
+
+      .divider {
+        margin-bottom: 34px;
+      }
+
+      .divider::before,
+      .divider::after {
+        width: 75px;
+      }
+
+      .music-card {
+        gap: 12px;
+
+        padding: 12px;
+
+        border-radius: 22px;
+      }
+
+      .album {
+        flex-basis: 72px;
+
+        width: 72px;
+        height: 72px;
+
+        border-radius: 16px;
+      }
+
+      .music-title {
+        font-size: 16px;
+      }
+
+      .music-description {
+        font-size: 16px;
+      }
+
+      .spotify {
+        min-width: 43px;
+
+        width: 43px;
+        height: 43px;
+
+        padding: 0;
+
+        border-radius: 50%;
+      }
+
+      .spotify-text {
+        display: none;
+      }
+
+      .bottom-note {
+        margin-top: 42px;
+      }
+
+    }
+
+
+    /* =====================================================
+       VERY SMALL PHONES
+    ===================================================== */
+
+    @media (max-width: 360px) {
+
+      .paper-note {
+        left: -16px;
+      }
+
+      .flowers {
+        right: -20px;
+      }
+
+      .hero h1 {
+        font-size: 49px;
+      }
+
+      .music-card {
+        gap: 9px;
+      }
+
+      .album {
+        flex-basis: 66px;
+
+        width: 66px;
+        height: 66px;
+      }
+
+      .music-title {
+        font-size: 14px;
+      }
+
+      .music-description {
+        font-size: 15px;
+      }
+
+    }
+
+
+    /* =====================================================
+       ANIMATION
+    ===================================================== */
+
+    @keyframes fadeUp {
 
       from {
         opacity: 0;
 
         transform:
-          translateY(10px);
+          translateY(15px);
       }
 
       to {
@@ -402,102 +940,123 @@
 
     }
 
-    /* SMALL PHONES */
-
-    @media (max-width: 380px) {
-
-      .wrap {
-        width:
-          min(
-            100% - 24px,
-            560px
-          );
-
-        padding-top: 42px;
-      }
-
-      .playlist {
-        padding: 13px;
-      }
-
-      .spotify {
-        padding: 0 11px;
-      }
-
-      .spotify small {
-        display: none;
-      }
-
-    }
-
   </style>
 </head>
 
 
 <body>
 
-  <main class="wrap">
+  <main class="page">
 
-    <!-- INTRO -->
 
-    <header class="intro">
+    <!-- DECORATION -->
 
-      <div class="music-mark">
-        ♫
+    <div class="paper-note">
+      a little<br>
+      music<br>
+      for you
+      <span>♡</span>
+    </div>
+
+
+    <div class="flowers">
+      ❀
+      <small>✿</small>
+    </div>
+
+
+
+    <!-- HERO -->
+
+    <header class="hero">
+
+      <div class="headphones">
+        ♡
       </div>
 
       <h1>
-        For Taara
+        For <em>Taara</em>
       </h1>
 
-      <p class="sub">
+      <p class="hero-text">
         some songs that made me think of you.<br>
-        and some that just sound like you. 🤍
+        and some that just sound like you.
       </p>
 
     </header>
 
 
-    <!-- REMINDS ME OF YOU -->
+
+    <!-- DIVIDER -->
+
+    <div class="divider">
+      ♡
+    </div>
+
+
+
+    <!-- FIRST PLAYLIST -->
 
     <section class="section">
 
-      <div class="section-label">
-        🤍 THESE REMIND ME OF YOU
-      </div>
+      <h2 class="section-heading">
+        <span>🤍</span>
+        These remind me of you
+      </h2>
 
 
       <a
-        class="playlist"
+        class="music-card"
         href="https://open.spotify.com/playlist/4NOPqOwIbdfL8w1OxM9pPs"
         target="_blank"
         rel="noopener noreferrer"
       >
 
-        <div class="art">
-          ♫
-        </div>
+        <div class="album"></div>
 
 
-        <div class="info">
+        <div class="music-info">
 
-          <div class="title">
-            Reminds Me of You🤍
+          <div class="music-title">
+            Reminds Me of You♡
           </div>
 
-          <div class="desc">
+          <div class="music-description">
             songs that make me think of you
           </div>
 
+
+          <div class="wave">
+
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+
+          </div>
+
         </div>
 
 
-        <div
-          class="spotify"
-          aria-label="Open in Spotify"
-        >
-          <span>▶</span>
-          <small>Spotify</small>
+        <div class="spotify">
+
+          <span class="spotify-icon">
+            ▶
+          </span>
+
+          <span class="spotify-text">
+            Spotify
+          </span>
+
+          <span>
+            →
+          </span>
+
         </div>
 
       </a>
@@ -506,46 +1065,83 @@
 
 
 
-    <!-- VERY TAARA -->
+    <!-- SECOND PLAYLIST -->
 
     <section class="section">
 
-      <div class="section-label">
-        🌼 VERY TAARA
-      </div>
+      <h2 class="section-heading">
+
+        <span class="flower">
+          🌼
+        </span>
+
+        Very Taara
+
+      </h2>
 
 
       <a
-        class="playlist"
+        class="music-card"
         href="https://open.spotify.com/playlist/0m9MUBTC2tcGojcFkEGVoW"
         target="_blank"
         rel="noopener noreferrer"
       >
 
-        <div class="art">
-          ✦
-        </div>
+        <div
+          class="album"
+          style="
+            background:
+            linear-gradient(
+              145deg,
+              #e5c889,
+              #9a8861
+            );
+          "
+        ></div>
 
 
-        <div class="info">
+        <div class="music-info">
 
-          <div class="title">
+          <div class="music-title">
             Veryyy TaaraaaLikee
           </div>
 
-          <div class="desc">
+          <div class="music-description">
             songs that just feel like you
+          </div>
+
+
+          <div class="wave">
+
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+
           </div>
 
         </div>
 
 
-        <div
-          class="spotify"
-          aria-label="Open in Spotify"
-        >
-          <span>▶</span>
-          <small>Spotify</small>
+        <div class="spotify">
+
+          <span class="spotify-icon">
+            ▶
+          </span>
+
+          <span class="spotify-text">
+            Spotify
+          </span>
+
+          <span>
+            →
+          </span>
+
         </div>
 
       </a>
@@ -554,16 +1150,22 @@
 
 
 
-    <!-- BOTTOM -->
+    <!-- HANDWRITTEN NOTE -->
 
-    <p class="hint">
-      tap a playlist to listen on Spotify
-    </p>
+    <div class="bottom-note">
+      good music,<br>
+      brighter days,<br>
+      with you ♡
+    </div>
 
+
+
+    <!-- FOOTER -->
 
     <footer>
       PB ♡
     </footer>
+
 
   </main>
 
