@@ -18,7 +18,9 @@
   <title>For Taara ♡</title>
 
 
-  <!-- Fonts -->
+  <!-- =====================================================
+       FONTS
+  ====================================================== -->
 
   <link
     rel="preconnect"
@@ -27,7 +29,7 @@
 
   <link
     rel="preconnect"
-    href="https://fonts.googleapis.com"
+    href="https://fonts.gstatic.com"
     crossorigin
   >
 
@@ -40,8 +42,8 @@
   <style>
 
     /* =====================================================
-       AESTHETIC PALETTE
-    ===================================================== */
+       COLOR PALETTE
+    ====================================================== */
 
     :root {
 
@@ -89,7 +91,7 @@
 
     /* =====================================================
        RESET
-    ===================================================== */
+    ====================================================== */
 
     * {
       box-sizing: border-box;
@@ -103,11 +105,9 @@
 
     body {
 
-      margin:
-        0;
+      margin: 0;
 
-      min-height:
-        100vh;
+      min-height: 100vh;
 
       color:
         var(--ink);
@@ -150,27 +150,21 @@
 
     body::before {
 
-      content:
-        "";
+      content: "";
 
-      position:
-        fixed;
+      position: fixed;
 
-      inset:
-        0;
+      inset: 0;
 
-      pointer-events:
-        none;
+      pointer-events: none;
 
-      opacity:
-        .075;
+      opacity: .075;
 
       background-image:
 
         url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.18'/%3E%3C/svg%3E");
 
-      z-index:
-        50;
+      z-index: 50;
 
       mix-blend-mode:
         multiply;
@@ -179,17 +173,14 @@
 
 
     a {
-      color:
-        inherit;
-
-      text-decoration:
-        none;
+      color: inherit;
+      text-decoration: none;
     }
 
 
     /* =====================================================
        PAGE
-    ===================================================== */
+    ====================================================== */
 
     .page {
 
@@ -206,16 +197,14 @@
         0 auto;
 
       padding:
-        25px
-        0
-        55px;
+        25px 0 55px;
 
     }
 
 
     /* =====================================================
-       LITTLE PAPER NOTE
-    ===================================================== */
+       TOP PAPER NOTE
+    ====================================================== */
 
     .paper-note {
 
@@ -232,8 +221,7 @@
         112px;
 
       padding:
-        14px
-        12px;
+        14px 12px;
 
       background:
         #EFE2DF;
@@ -255,9 +243,7 @@
         rotate(-6deg);
 
       box-shadow:
-        0
-        9px
-        24px
+        0 9px 24px
         rgba(76,57,60,.07);
 
       z-index:
@@ -285,7 +271,7 @@
 
     /* =====================================================
        FLOWERS
-    ===================================================== */
+    ====================================================== */
 
     .flowers {
 
@@ -338,7 +324,7 @@
 
     /* =====================================================
        HERO
-    ===================================================== */
+    ====================================================== */
 
     .hero {
 
@@ -349,10 +335,7 @@
         116px;
 
       animation:
-        fadeUp
-        .8s
-        ease
-        both;
+        fadeUp .8s ease both;
 
     }
 
@@ -366,9 +349,7 @@
         66px;
 
       margin:
-        0
-        auto
-        18px;
+        0 auto 18px;
 
       display:
         grid;
@@ -393,9 +374,7 @@
         29px;
 
       box-shadow:
-        0
-        10px
-        28px
+        0 10px 28px
         rgba(76,57,60,.07);
 
     }
@@ -443,9 +422,7 @@
     .hero-text {
 
       margin:
-        22px
-        auto
-        0;
+        22px auto 0;
 
       max-width:
         350px;
@@ -491,7 +468,7 @@
 
     /* =====================================================
        DIVIDER
-    ===================================================== */
+    ====================================================== */
 
     .divider {
 
@@ -508,9 +485,7 @@
         12px;
 
       margin:
-        29px
-        auto
-        38px;
+        29px auto 38px;
 
       color:
         var(--champagne);
@@ -538,7 +513,7 @@
 
     /* =====================================================
        SECTIONS
-    ===================================================== */
+    ====================================================== */
 
     .section {
 
@@ -546,10 +521,7 @@
         33px;
 
       animation:
-        fadeUp
-        .8s
-        ease
-        both;
+        fadeUp .8s ease both;
 
     }
 
@@ -566,9 +538,7 @@
         9px;
 
       margin:
-        0
-        5px
-        13px;
+        0 5px 13px;
 
       color:
         #51484A;
@@ -605,7 +575,12 @@
 
     /* =====================================================
        MUSIC CARD
-    ===================================================== */
+
+       IMPORTANT:
+       The Spotify button is absolutely positioned.
+       Therefore it will ALWAYS stay in exactly the
+       same position on the right side of the card.
+    ====================================================== */
 
     .music-card {
 
@@ -627,19 +602,23 @@
       padding:
         12px;
 
+      /* Space reserved for Spotify button */
+
+      padding-right:
+        72px;
+
       gap:
         13px;
 
       border:
-        1px
-        solid
+        1px solid
         var(--line);
 
       border-radius:
         23px;
 
       background:
-        rgba(255,252,249,.82);
+        rgba(255,252,249,.84);
 
       box-shadow:
         0
@@ -672,8 +651,8 @@
 
 
     /* =====================================================
-       SMALL HEART
-    ===================================================== */
+       HEART
+    ====================================================== */
 
     .music-card::after {
 
@@ -695,6 +674,9 @@
       font-size:
         20px;
 
+      line-height:
+        1;
+
       pointer-events:
         none;
 
@@ -703,7 +685,7 @@
 
     /* =====================================================
        ALBUM ART
-    ===================================================== */
+    ====================================================== */
 
     .album {
 
@@ -740,9 +722,7 @@
         );
 
       box-shadow:
-        0
-        6px
-        16px
+        0 6px 16px
         rgba(73,57,59,.11);
 
     }
@@ -799,7 +779,7 @@
 
     /* =====================================================
        MUSIC INFORMATION
-    ===================================================== */
+    ====================================================== */
 
     .music-info {
 
@@ -810,8 +790,7 @@
         1;
 
       padding:
-        2px
-        0;
+        2px 0;
 
     }
 
@@ -881,7 +860,7 @@
 
     /* =====================================================
        WAVEFORM
-    ===================================================== */
+    ====================================================== */
 
     .wave {
 
@@ -959,15 +938,32 @@
 
     /* =====================================================
        SPOTIFY BUTTON
-       PERFECTLY CENTERED
-    ===================================================== */
+
+       THIS IS THE IMPORTANT FIX.
+
+       It is NOT part of the flex layout.
+
+       It is locked to:
+       right: 14px
+       top: 50%
+
+       Therefore:
+       - same horizontal position
+       - same vertical position
+       - independent of text
+       - independent of title length
+    ====================================================== */
 
     .spotify {
 
-      flex:
-        0
-        0
-        45px;
+      position:
+        absolute;
+
+      right:
+        14px;
+
+      top:
+        50%;
 
       width:
         45px;
@@ -975,10 +971,10 @@
       height:
         45px;
 
-      padding:
+      margin:
         0;
 
-      margin:
+      padding:
         0;
 
       display:
@@ -991,7 +987,7 @@
         center;
 
       border:
-        0;
+        none;
 
       border-radius:
         50%;
@@ -999,14 +995,17 @@
       background:
         var(--plum);
 
-      color:
-        white;
-
       box-shadow:
         0
         7px
         17px
         rgba(85,64,75,.22);
+
+      transform:
+        translateY(-50%);
+
+      z-index:
+        5;
 
       transition:
         transform .2s ease,
@@ -1019,6 +1018,7 @@
     .spotify:hover {
 
       transform:
+        translateY(-50%)
         scale(1.06);
 
       background:
@@ -1035,9 +1035,20 @@
 
     /* =====================================================
        SPOTIFY ICON
-    ===================================================== */
+
+       Also absolutely centered INSIDE the button.
+    ====================================================== */
 
     .spotify-icon {
+
+      position:
+        absolute;
+
+      left:
+        50%;
+
+      top:
+        50%;
 
       width:
         24px;
@@ -1054,10 +1065,8 @@
       justify-content:
         center;
 
-      flex:
-        0
-        0
-        24px;
+      transform:
+        translate(-50%, -50%);
 
       line-height:
         0;
@@ -1076,15 +1085,18 @@
       height:
         24px;
 
-      overflow:
-        visible;
+      margin:
+        0;
+
+      padding:
+        0;
 
     }
 
 
     /* =====================================================
        BOTTOM NOTE
-    ===================================================== */
+    ====================================================== */
 
     .bottom-note {
 
@@ -1092,14 +1104,10 @@
         145px;
 
       margin:
-        44px
-        0
-        0
-        auto;
+        44px 0 0 auto;
 
       padding:
-        13px
-        14px;
+        13px 14px;
 
       background:
         #EFE1DD;
@@ -1134,7 +1142,7 @@
 
     /* =====================================================
        FOOTER
-    ===================================================== */
+    ====================================================== */
 
     footer {
 
@@ -1159,7 +1167,7 @@
 
     /* =====================================================
        MOBILE
-    ===================================================== */
+    ====================================================== */
 
     @media (max-width: 430px) {
 
@@ -1170,9 +1178,7 @@
           calc(100% - 22px);
 
         padding:
-          22px
-          0
-          45px;
+          22px 0 45px;
 
       }
 
@@ -1255,9 +1261,7 @@
       .divider {
 
         margin:
-          27px
-          auto
-          33px;
+          27px auto 33px;
 
       }
 
@@ -1290,6 +1294,8 @@
       }
 
 
+      /* CARD */
+
       .music-card {
 
         min-height:
@@ -1297,6 +1303,13 @@
 
         padding:
           10px;
+
+        /*
+          Extra right space for the button
+        */
+
+        padding-right:
+          64px;
 
         gap:
           11px;
@@ -1307,12 +1320,12 @@
       }
 
 
+      /* ALBUM */
+
       .album {
 
         flex:
-          0
-          0
-          69px;
+          0 0 69px;
 
         width:
           69px;
@@ -1325,6 +1338,8 @@
 
       }
 
+
+      /* TEXT */
 
       .music-title {
 
@@ -1350,12 +1365,12 @@
       }
 
 
+      /* BUTTON */
+
       .spotify {
 
-        flex:
-          0
-          0
-          42px;
+        right:
+          12px;
 
         width:
           42px;
@@ -1366,15 +1381,14 @@
       }
 
 
+      /* ICON */
+
       .spotify-icon {
 
         width:
           22px;
 
         height:
-          22px;
-
-        flex-basis:
           22px;
 
       }
@@ -1406,7 +1420,7 @@
 
     /* =====================================================
        VERY SMALL PHONES
-    ===================================================== */
+    ====================================================== */
 
     @media (max-width: 360px) {
 
@@ -1448,13 +1462,16 @@
         gap:
           9px;
 
+        padding-right:
+          61px;
+
       }
 
 
       .album {
 
-        flex-basis:
-          64px;
+        flex:
+          0 0 64px;
 
         width:
           64px;
@@ -1483,8 +1500,8 @@
 
       .spotify {
 
-        flex-basis:
-          40px;
+        right:
+          11px;
 
         width:
           40px;
@@ -1501,9 +1518,6 @@
           21px;
 
         height:
-          21px;
-
-        flex-basis:
           21px;
 
       }
@@ -1524,7 +1538,7 @@
 
     /* =====================================================
        ANIMATION
-    ===================================================== */
+    ====================================================== */
 
     @keyframes fadeUp {
 
@@ -1561,7 +1575,9 @@
   <main class="page">
 
 
-    <!-- PAPER NOTE -->
+    <!-- =================================================
+         PAPER NOTE
+    ================================================== -->
 
     <div class="paper-note">
 
@@ -1576,7 +1592,9 @@
     </div>
 
 
-    <!-- FLOWERS -->
+    <!-- =================================================
+         FLOWERS
+    ================================================== -->
 
     <div class="flowers">
 
@@ -1590,7 +1608,9 @@
 
 
 
-    <!-- HERO -->
+    <!-- =================================================
+         HERO
+    ================================================== -->
 
     <header class="hero">
 
@@ -1618,7 +1638,9 @@
 
 
 
-    <!-- DIVIDER -->
+    <!-- =================================================
+         DIVIDER
+    ================================================== -->
 
     <div class="divider">
       ♡
@@ -1628,7 +1650,7 @@
 
     <!-- =================================================
          PLAYLIST 1
-    ================================================= -->
+    ================================================== -->
 
     <section class="section">
 
@@ -1655,8 +1677,12 @@
       >
 
 
+        <!-- ALBUM -->
+
         <div class="album"></div>
 
+
+        <!-- INFORMATION -->
 
         <div class="music-info">
 
@@ -1689,11 +1715,17 @@
         </div>
 
 
-        <!-- SPOTIFY BUTTON -->
+        <!-- =================================================
+             SPOTIFY BUTTON
+
+             ABSOLUTELY CENTERED IN CARD
+        ================================================== -->
 
         <div class="spotify">
 
+
           <span class="spotify-icon">
+
 
             <svg
               viewBox="0 0 24 24"
@@ -1701,7 +1733,8 @@
               aria-hidden="true"
             >
 
-              <!-- white Spotify circle -->
+
+              <!-- Spotify white circle -->
 
               <circle
                 cx="12"
@@ -1711,7 +1744,7 @@
               />
 
 
-              <!-- Spotify curve 1 -->
+              <!-- Top curve -->
 
               <path
                 d="M7.25 9.35
@@ -1725,7 +1758,7 @@
               />
 
 
-              <!-- Spotify curve 2 -->
+              <!-- Middle curve -->
 
               <path
                 d="M7.70 12.25
@@ -1739,7 +1772,7 @@
               />
 
 
-              <!-- Spotify curve 3 -->
+              <!-- Bottom curve -->
 
               <path
                 d="M8.30 15.05
@@ -1752,9 +1785,12 @@
                 stroke-linecap="round"
               />
 
+
             </svg>
 
+
           </span>
+
 
         </div>
 
@@ -1768,7 +1804,7 @@
 
     <!-- =================================================
          PLAYLIST 2
-    ================================================= -->
+    ================================================== -->
 
     <section class="section">
 
@@ -1795,8 +1831,12 @@
       >
 
 
+        <!-- ALBUM -->
+
         <div class="album second"></div>
 
+
+        <!-- INFORMATION -->
 
         <div class="music-info">
 
@@ -1829,17 +1869,22 @@
         </div>
 
 
-        <!-- SPOTIFY BUTTON -->
+        <!-- =================================================
+             SPOTIFY BUTTON
+        ================================================== -->
 
         <div class="spotify">
 
+
           <span class="spotify-icon">
+
 
             <svg
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
               aria-hidden="true"
             >
+
 
               <circle
                 cx="12"
@@ -1884,9 +1929,12 @@
                 stroke-linecap="round"
               />
 
+
             </svg>
 
+
           </span>
+
 
         </div>
 
@@ -1898,7 +1946,9 @@
 
 
 
-    <!-- BOTTOM NOTE -->
+    <!-- =================================================
+         BOTTOM NOTE
+    ================================================== -->
 
     <div class="bottom-note">
 
@@ -1912,10 +1962,14 @@
 
 
 
-    <!-- FOOTER -->
+    <!-- =================================================
+         FOOTER
+    ================================================== -->
 
     <footer>
+
       PB ♡
+
     </footer>
 
 
