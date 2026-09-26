@@ -18,7 +18,7 @@
   <style>
 
     /* =====================================================
-       BASE
+       COLORS
     ===================================================== */
 
     :root {
@@ -29,8 +29,8 @@
       --soft-ink: #68645a;
       --muted: #928c7e;
 
-      --olive: #7d8658;
-      --olive-dark: #667044;
+      --olive: #879363;
+      --olive-dark: #687348;
 
       --gold: #c89b43;
       --gold-soft: #ead7a9;
@@ -39,6 +39,11 @@
 
       --border: rgba(75,69,55,.13);
     }
+
+
+    /* =====================================================
+       RESET
+    ===================================================== */
 
     * {
       box-sizing: border-box;
@@ -50,6 +55,7 @@
 
     body {
       margin: 0;
+
       min-height: 100vh;
 
       color: var(--ink);
@@ -81,6 +87,9 @@
       overflow-x: hidden;
     }
 
+
+    /* subtle paper texture */
+
     body::before {
       content: "";
 
@@ -90,12 +99,13 @@
 
       pointer-events: none;
 
-      opacity: .18;
+      opacity: .16;
 
       background-image:
         url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.18'/%3E%3C/svg%3E");
 
       z-index: 20;
+
       mix-blend-mode: multiply;
     }
 
@@ -112,10 +122,11 @@
     .page {
       position: relative;
 
-      width: min(
-        100% - 30px,
-        560px
-      );
+      width:
+        min(
+          100% - 30px,
+          560px
+        );
 
       margin: auto;
 
@@ -127,7 +138,7 @@
 
 
     /* =====================================================
-       DECORATIVE PAPER
+       PAPER NOTE
     ===================================================== */
 
     .paper-note {
@@ -149,7 +160,9 @@
 
       color: #777064;
 
-      font-family: "Caveat", cursive;
+      font-family:
+        "Caveat",
+        cursive;
 
       font-size: 20px;
 
@@ -158,7 +171,10 @@
       transform: rotate(-7deg);
 
       box-shadow:
-        0 10px 25px rgba(50,42,30,.08);
+        0
+        10px
+        25px
+        rgba(50,42,30,.08);
 
       z-index: 2;
     }
@@ -174,7 +190,8 @@
       width: 70px;
       height: 18px;
 
-      background: rgba(219,198,156,.5);
+      background:
+        rgba(219,198,156,.5);
 
       transform: rotate(4deg);
     }
@@ -379,7 +396,7 @@
 
 
     /* =====================================================
-       SECTION
+       SECTIONS
     ===================================================== */
 
     .section {
@@ -453,8 +470,8 @@
       background:
         linear-gradient(
           135deg,
-          rgba(255,255,255,.76),
-          rgba(249,244,234,.57)
+          rgba(255,255,255,.78),
+          rgba(249,244,234,.58)
         );
 
       box-shadow:
@@ -490,14 +507,20 @@
       top: 10px;
       right: 15px;
 
-      color: rgba(115,106,84,.25);
+      color:
+        rgba(
+          115,
+          106,
+          84,
+          .25
+        );
 
       font-size: 23px;
     }
 
 
     /* =====================================================
-       ALBUM IMAGE
+       ALBUM ART
     ===================================================== */
 
     .album {
@@ -557,7 +580,13 @@
 
       place-items: center;
 
-      color: rgba(255,255,255,.82);
+      color:
+        rgba(
+          255,
+          255,
+          255,
+          .82
+        );
 
       font-family:
         "Playfair Display",
@@ -568,7 +597,7 @@
 
 
     /* =====================================================
-       CARD TEXT
+       MUSIC TEXT
     ===================================================== */
 
     .music-info {
@@ -609,7 +638,7 @@
 
 
     /* =====================================================
-       FAKE WAVEFORM
+       WAVEFORM
     ===================================================== */
 
     .wave {
@@ -631,20 +660,47 @@
 
       border-radius: 5px;
 
-      background: var(--gold);
+      background:
+        var(--gold);
 
       opacity: .45;
     }
 
-    .wave span:nth-child(1) { height: 6px; }
-    .wave span:nth-child(2) { height: 12px; }
-    .wave span:nth-child(3) { height: 17px; }
-    .wave span:nth-child(4) { height: 9px; }
-    .wave span:nth-child(5) { height: 14px; }
-    .wave span:nth-child(6) { height: 6px; }
-    .wave span:nth-child(7) { height: 11px; }
-    .wave span:nth-child(8) { height: 16px; }
-    .wave span:nth-child(9) { height: 7px; }
+    .wave span:nth-child(1) {
+      height: 6px;
+    }
+
+    .wave span:nth-child(2) {
+      height: 12px;
+    }
+
+    .wave span:nth-child(3) {
+      height: 17px;
+    }
+
+    .wave span:nth-child(4) {
+      height: 9px;
+    }
+
+    .wave span:nth-child(5) {
+      height: 14px;
+    }
+
+    .wave span:nth-child(6) {
+      height: 6px;
+    }
+
+    .wave span:nth-child(7) {
+      height: 11px;
+    }
+
+    .wave span:nth-child(8) {
+      height: 16px;
+    }
+
+    .wave span:nth-child(9) {
+      height: 7px;
+    }
 
 
     /* =====================================================
@@ -663,15 +719,15 @@
 
       justify-content: center;
 
-      gap: 7px;
+      gap: 8px;
 
-      min-width: 106px;
+      min-width: 108px;
 
       height: 43px;
 
       padding:
         0
-        14px;
+        15px;
 
       border-radius: 999px;
 
@@ -687,8 +743,13 @@
       box-shadow:
         0
         7px
-        17px
-        rgba(91,98,58,.2);
+        18px
+        rgba(
+          91,
+          98,
+          58,
+          .22
+        );
 
       font-size: 13px;
 
@@ -699,18 +760,61 @@
         box-shadow .2s ease;
     }
 
-    .spotify-icon {
-      font-size: 16px;
-    }
-
     .spotify:hover {
-      transform: translateY(-1px);
+      transform:
+        translateY(-2px);
 
       box-shadow:
         0
         10px
-        22px
-        rgba(91,98,58,.28);
+        24px
+        rgba(
+          91,
+          98,
+          58,
+          .30
+        );
+    }
+
+
+    /* REAL SPOTIFY-STYLE ICON */
+
+    .spotify-icon {
+      width: 20px;
+      height: 20px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      flex-shrink: 0;
+    }
+
+    .spotify-icon svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .spotify-text {
+      font-size: 13px;
+
+      letter-spacing: .01em;
+    }
+
+    .spotify-arrow {
+      font-size: 15px;
+
+      margin-left: 1px;
+
+      transition:
+        transform .2s ease;
+    }
+
+    .music-card:hover
+    .spotify-arrow {
+      transform:
+        translateX(3px);
     }
 
 
@@ -751,7 +855,12 @@
         0
         10px
         25px
-        rgba(60,49,35,.06);
+        rgba(
+          60,
+          49,
+          35,
+          .06
+        );
     }
 
 
@@ -871,6 +980,10 @@
         display: none;
       }
 
+      .spotify-arrow {
+        display: none;
+      }
+
       .bottom-note {
         margin-top: 42px;
       }
@@ -949,24 +1062,34 @@
   <main class="page">
 
 
-    <!-- DECORATION -->
+    <!-- ================================================
+         TOP DECORATION
+    ================================================= -->
 
     <div class="paper-note">
       a little<br>
       music<br>
       for you
-      <span>♡</span>
+
+      <span>
+        ♡
+      </span>
     </div>
 
 
     <div class="flowers">
       ❀
-      <small>✿</small>
+
+      <small>
+        ✿
+      </small>
     </div>
 
 
 
-    <!-- HERO -->
+    <!-- ================================================
+         HERO
+    ================================================= -->
 
     <header class="hero">
 
@@ -974,20 +1097,27 @@
         ♡
       </div>
 
+
       <h1>
         For <em>Taara</em>
       </h1>
 
+
       <p class="hero-text">
+
         some songs that made me think of you.<br>
+
         and some that just sound like you.
+
       </p>
 
     </header>
 
 
 
-    <!-- DIVIDER -->
+    <!-- ================================================
+         DIVIDER
+    ================================================= -->
 
     <div class="divider">
       ♡
@@ -995,31 +1125,47 @@
 
 
 
-    <!-- FIRST PLAYLIST -->
+    <!-- ================================================
+         PLAYLIST 1
+    ================================================= -->
 
     <section class="section">
 
       <h2 class="section-heading">
-        <span>🤍</span>
+
+        <span>
+          🤍
+        </span>
+
         These remind me of you
+
       </h2>
 
 
       <a
         class="music-card"
+
         href="https://open.spotify.com/playlist/4NOPqOwIbdfL8w1OxM9pPs"
+
         target="_blank"
+
         rel="noopener noreferrer"
       >
 
+
+        <!-- ALBUM -->
+
         <div class="album"></div>
 
+
+        <!-- INFORMATION -->
 
         <div class="music-info">
 
           <div class="music-title">
             Reminds Me of You♡
           </div>
+
 
           <div class="music-description">
             songs that make me think of you
@@ -1043,17 +1189,65 @@
         </div>
 
 
+        <!-- SPOTIFY -->
+
         <div class="spotify">
 
+
           <span class="spotify-icon">
-            ▶
+
+            <svg
+              viewBox="0 0 24 24"
+
+              fill="none"
+
+              xmlns="http://www.w3.org/2000/svg"
+
+              aria-hidden="true"
+            >
+
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+                fill="white"
+              />
+
+
+              <path
+                d="M7.2 10.1C10.2 9.2 14.2 9.4 17 10.7"
+                stroke="#687348"
+                stroke-width="1.55"
+                stroke-linecap="round"
+              />
+
+
+              <path
+                d="M7.7 13C10.2 12.3 13.6 12.5 16 13.6"
+                stroke="#687348"
+                stroke-width="1.45"
+                stroke-linecap="round"
+              />
+
+
+              <path
+                d="M8.4 15.7C10.5 15.2 13.1 15.4 14.8 16.2"
+                stroke="#687348"
+                stroke-width="1.35"
+                stroke-linecap="round"
+              />
+
+            </svg>
+
           </span>
+
 
           <span class="spotify-text">
             Spotify
           </span>
 
-          <span>
+
+          <span class="spotify-arrow">
             →
           </span>
 
@@ -1065,7 +1259,9 @@
 
 
 
-    <!-- SECOND PLAYLIST -->
+    <!-- ================================================
+         PLAYLIST 2
+    ================================================= -->
 
     <section class="section">
 
@@ -1082,13 +1278,20 @@
 
       <a
         class="music-card"
+
         href="https://open.spotify.com/playlist/0m9MUBTC2tcGojcFkEGVoW"
+
         target="_blank"
+
         rel="noopener noreferrer"
       >
 
+
+        <!-- ALBUM -->
+
         <div
           class="album"
+
           style="
             background:
             linear-gradient(
@@ -1100,11 +1303,14 @@
         ></div>
 
 
+        <!-- INFORMATION -->
+
         <div class="music-info">
 
           <div class="music-title">
             Veryyy TaaraaaLikee
           </div>
+
 
           <div class="music-description">
             songs that just feel like you
@@ -1128,17 +1334,65 @@
         </div>
 
 
+        <!-- SPOTIFY -->
+
         <div class="spotify">
 
+
           <span class="spotify-icon">
-            ▶
+
+            <svg
+              viewBox="0 0 24 24"
+
+              fill="none"
+
+              xmlns="http://www.w3.org/2000/svg"
+
+              aria-hidden="true"
+            >
+
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+                fill="white"
+              />
+
+
+              <path
+                d="M7.2 10.1C10.2 9.2 14.2 9.4 17 10.7"
+                stroke="#687348"
+                stroke-width="1.55"
+                stroke-linecap="round"
+              />
+
+
+              <path
+                d="M7.7 13C10.2 12.3 13.6 12.5 16 13.6"
+                stroke="#687348"
+                stroke-width="1.45"
+                stroke-linecap="round"
+              />
+
+
+              <path
+                d="M8.4 15.7C10.5 15.2 13.1 15.4 14.8 16.2"
+                stroke="#687348"
+                stroke-width="1.35"
+                stroke-linecap="round"
+              />
+
+            </svg>
+
           </span>
+
 
           <span class="spotify-text">
             Spotify
           </span>
 
-          <span>
+
+          <span class="spotify-arrow">
             →
           </span>
 
@@ -1150,17 +1404,25 @@
 
 
 
-    <!-- HANDWRITTEN NOTE -->
+    <!-- ================================================
+         BOTTOM NOTE
+    ================================================= -->
 
     <div class="bottom-note">
+
       good music,<br>
+
       brighter days,<br>
+
       with you ♡
+
     </div>
 
 
 
-    <!-- FOOTER -->
+    <!-- ================================================
+         FOOTER
+    ================================================= -->
 
     <footer>
       PB ♡
