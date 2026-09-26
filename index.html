@@ -3,1375 +3,1366 @@
 
 <head>
 
-<meta charset="UTF-8">
+  <meta charset="UTF-8">
 
-<meta
-  name="viewport"
-  content="width=device-width, initial-scale=1.0, viewport-fit=cover"
->
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  >
 
-<meta
-  name="theme-color"
-  content="#F7F1EE"
->
+  <meta
+    name="theme-color"
+    content="#F7F1EE"
+  >
 
-<title>For Taara ♡</title>
+  <title>For Taara ♡</title>
 
 
-<!-- =====================================================
-     FONTS
-====================================================== -->
+  <!-- =========================
+       FONTS
+  ========================== -->
 
-<link
-  rel="preconnect"
-  href="https://fonts.googleapis.com"
->
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
 
-<link
-  rel="preconnect"
-  href="https://fonts.gstatic.com"
-  crossorigin
->
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
 
-<link
-  href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap"
-  rel="stylesheet"
->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap"
+    rel="stylesheet"
+  >
 
 
-<style>
+  <style>
 
-/* =====================================================
-   PALETTE
-===================================================== */
+    /* =====================================================
+       PALETTE
+    ====================================================== */
 
-:root {
+    :root {
 
-  --background: #F7F1EE;
-  --background-2: #F2E7E3;
+      --background: #F7F1EE;
+      --background-2: #F2E7E3;
 
-  --card: #FFFCF9;
+      --card: #FFFCF9;
 
-  --ink: #40383A;
-  --ink-soft: #706467;
-  --muted: #94878A;
+      --ink: #40383A;
+      --ink-soft: #706467;
+      --muted: #94878A;
 
-  --rose: #B98588;
-  --rose-dark: #8E626B;
+      --rose: #B98588;
+      --rose-dark: #8E626B;
 
-  --plum: #66505B;
-  --plum-dark: #55404B;
+      --plum: #66505B;
+      --plum-dark: #55404B;
 
-  --champagne: #C7A878;
-  --champagne-soft: #E5D5BC;
+      --champagne: #C7A878;
+      --champagne-soft: #E5D5BC;
 
-  --line: rgba(64,56,58,.11);
+      --line: rgba(64,56,58,.11);
 
-}
+    }
 
 
-/* =====================================================
-   RESET
-===================================================== */
+    /* =====================================================
+       RESET
+    ====================================================== */
 
-* {
-  box-sizing: border-box;
-}
+    * {
+      box-sizing: border-box;
+    }
 
 
-html {
-  scroll-behavior: smooth;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
 
-body {
+    body {
 
-  margin: 0;
+      margin: 0;
 
-  min-height: 100vh;
+      min-height: 100vh;
 
-  color: var(--ink);
+      color: var(--ink);
 
-  font-family:
-    "DM Sans",
-    system-ui,
-    sans-serif;
+      font-family:
+        "DM Sans",
+        system-ui,
+        sans-serif;
 
-  background:
+      background:
 
-    radial-gradient(
-      circle at 12% 4%,
-      rgba(255,255,255,.9),
-      transparent 27%
-    ),
+        radial-gradient(
+          circle at 12% 4%,
+          rgba(255,255,255,.9),
+          transparent 27%
+        ),
 
-    radial-gradient(
-      circle at 92% 45%,
-      rgba(185,133,136,.10),
-      transparent 31%
-    ),
+        radial-gradient(
+          circle at 92% 45%,
+          rgba(185,133,136,.10),
+          transparent 31%
+        ),
 
-    linear-gradient(
-      135deg,
-      var(--background),
-      var(--background-2)
-    );
+        linear-gradient(
+          135deg,
+          var(--background),
+          var(--background-2)
+        );
 
-  -webkit-font-smoothing: antialiased;
+      -webkit-font-smoothing: antialiased;
 
-  overflow-x: hidden;
+      overflow-x: hidden;
 
-}
+    }
 
 
-/* subtle paper texture */
+    /* =====================================================
+       PAPER TEXTURE
+    ====================================================== */
 
-body::before {
+    body::before {
 
-  content: "";
+      content: "";
 
-  position: fixed;
+      position: fixed;
 
-  inset: 0;
+      inset: 0;
 
-  pointer-events: none;
+      pointer-events: none;
 
-  opacity: .06;
+      opacity: .055;
 
-  background-image:
+      background-image:
 
-    url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.18'/%3E%3C/svg%3E");
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.18'/%3E%3C/svg%3E");
 
-  z-index: 50;
+      z-index: 50;
 
-  mix-blend-mode: multiply;
+      mix-blend-mode: multiply;
 
-}
+    }
 
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
 
-/* =====================================================
-   PAGE
-===================================================== */
+    /* =====================================================
+       PAGE
+    ====================================================== */
 
-.page {
+    .page {
 
-  position: relative;
+      position: relative;
 
-  width:
-    min(
-      calc(100% - 26px),
-      570px
-    );
+      width:
+        min(
+          calc(100% - 26px),
+          570px
+        );
 
-  margin: 0 auto;
+      margin: 0 auto;
 
-  padding:
-    25px
-    0
-    55px;
+      padding:
+        25px
+        0
+        55px;
 
-}
+    }
 
 
-/* =====================================================
-   PAPER NOTE
-===================================================== */
+    /* =====================================================
+       TOP PAPER NOTE
+    ====================================================== */
 
-.paper-note {
+    .paper-note {
 
-  position: absolute;
+      position: absolute;
 
-  top: 18px;
+      top: 18px;
 
-  left: -6px;
+      left: -6px;
 
-  width: 112px;
+      width: 112px;
 
-  padding:
-    14px
-    12px;
+      padding:
+        14px
+        12px;
 
-  background: #EFE2DF;
+      background: #EFE2DF;
 
-  color: #806F72;
+      color: #806F72;
 
-  font-family:
-    "Caveat",
-    cursive;
+      font-family:
+        "Caveat",
+        cursive;
 
-  font-size: 19px;
+      font-size: 19px;
 
-  line-height: 1.02;
+      line-height: 1.02;
 
-  transform: rotate(-6deg);
+      transform: rotate(-6deg);
 
-  box-shadow:
-    0
-    9px
-    24px
-    rgba(76,57,60,.07);
+      box-shadow:
+        0
+        9px
+        24px
+        rgba(76,57,60,.07);
 
-  z-index: 2;
+      z-index: 2;
 
-}
+    }
 
 
-.paper-note span {
+    .paper-note span {
 
-  display: block;
+      display: block;
 
-  margin-top: 7px;
+      margin-top: 7px;
 
-  color: var(--rose);
+      color: var(--rose);
 
-  font-size: 24px;
+      font-size: 24px;
 
-}
+    }
 
 
-/* =====================================================
-   FLOWERS
-===================================================== */
+    /* =====================================================
+       FLOWERS
+    ====================================================== */
 
-.flowers {
+    .flowers {
 
-  position: absolute;
+      position: absolute;
 
-  top: 11px;
+      top: 11px;
 
-  right: -3px;
+      right: -3px;
 
-  color: var(--rose);
+      color: var(--rose);
 
-  font-size: 30px;
+      font-size: 30px;
 
-  line-height: .7;
+      line-height: .7;
 
-  opacity: .68;
+      opacity: .68;
 
-  transform: rotate(8deg);
+      transform: rotate(8deg);
 
-}
+    }
 
 
-.flowers small {
+    .flowers small {
 
-  display: block;
+      display: block;
 
-  margin-left: 31px;
+      margin-left: 31px;
 
-  margin-top: 5px;
+      margin-top: 5px;
 
-  color: var(--champagne);
+      color: var(--champagne);
 
-  font-size: 17px;
+      font-size: 17px;
 
-}
+    }
 
 
-/* =====================================================
-   HERO
-===================================================== */
+    /* =====================================================
+       HERO
+    ====================================================== */
 
-.hero {
+    .hero {
 
-  text-align: center;
+      text-align: center;
 
-  padding-top: 116px;
+      padding-top: 116px;
 
-  animation:
-    fadeUp .8s ease both;
+      animation:
+        fadeUp .8s ease both;
 
-}
+    }
 
 
-.headphones {
+    .headphones {
 
-  width: 66px;
+      width: 66px;
 
-  height: 66px;
+      height: 66px;
 
-  margin:
-    0
-    auto
-    18px;
+      margin:
+        0
+        auto
+        18px;
 
-  display: grid;
+      display: grid;
 
-  place-items: center;
+      place-items: center;
 
-  border:
-    1px solid
-    rgba(64,56,58,.10);
+      border:
+        1px solid
+        rgba(64,56,58,.10);
 
-  border-radius: 50%;
+      border-radius: 50%;
 
-  background:
-    rgba(255,255,255,.60);
+      background:
+        rgba(255,255,255,.60);
 
-  color:
-    var(--rose-dark);
+      color:
+        var(--rose-dark);
 
-  font-size: 29px;
+      font-size: 29px;
 
-  box-shadow:
-    0
-    10px
-    28px
-    rgba(76,57,60,.07);
+      box-shadow:
+        0
+        10px
+        28px
+        rgba(76,57,60,.07);
 
-}
+    }
 
 
-.hero h1 {
+    .hero h1 {
 
-  margin: 0;
+      margin: 0;
 
-  font-family:
-    "Playfair Display",
-    serif;
+      font-family:
+        "Playfair Display",
+        serif;
 
-  font-size:
-    clamp(
-      52px,
-      15vw,
-      78px
-    );
+      font-size:
+        clamp(
+          52px,
+          15vw,
+          78px
+        );
 
-  line-height: .94;
+      line-height: .94;
 
-  letter-spacing: -.055em;
+      letter-spacing: -.055em;
 
-  font-weight: 500;
+      font-weight: 500;
 
-}
+    }
 
 
-.hero h1 em {
+    .hero h1 em {
 
-  color:
-    var(--rose-dark);
+      color:
+        var(--rose-dark);
 
-  font-style: italic;
+      font-style: italic;
 
-}
+    }
 
 
-.hero-text {
+    .hero-text {
 
-  margin:
-    22px
-    auto
-    0;
+      margin:
+        22px
+        auto
+        0;
 
-  max-width: 350px;
+      max-width: 350px;
 
-  color:
-    var(--ink-soft);
+      color:
+        var(--ink-soft);
 
-  font-family:
-    "Playfair Display",
-    serif;
+      font-family:
+        "Playfair Display",
+        serif;
 
-  font-size: 14px;
+      font-size: 14px;
 
-  line-height: 1.85;
+      line-height: 1.85;
 
-  letter-spacing: .045em;
+      letter-spacing: .045em;
 
-}
+    }
 
 
-.hero-text::after {
+    .hero-text::after {
 
-  content: "♡";
+      content: "♡";
 
-  display: block;
+      display: block;
 
-  margin-top: 16px;
+      margin-top: 16px;
 
-  color:
-    var(--champagne);
+      color:
+        var(--champagne);
 
-  font-size: 24px;
+      font-size: 24px;
 
-}
+    }
 
 
-/* =====================================================
-   DIVIDER
-===================================================== */
+    /* =====================================================
+       DIVIDER
+    ====================================================== */
 
-.divider {
+    .divider {
 
-  display: flex;
+      display: flex;
 
-  align-items: center;
+      align-items: center;
 
-  justify-content: center;
+      justify-content: center;
 
-  gap: 12px;
+      gap: 12px;
 
-  margin:
-    29px
-    auto
-    38px;
+      margin:
+        29px
+        auto
+        38px;
 
-  color:
-    var(--champagne);
+      color:
+        var(--champagne);
 
-}
+    }
 
 
-.divider::before,
-.divider::after {
+    .divider::before,
+    .divider::after {
 
-  content: "";
+      content: "";
 
-  width: 92px;
+      width: 92px;
 
-  height: 1px;
+      height: 1px;
 
-  background:
-    var(--champagne-soft);
+      background:
+        var(--champagne-soft);
 
-}
+    }
 
 
-/* =====================================================
-   SECTIONS
-===================================================== */
+    /* =====================================================
+       SECTIONS
+    ====================================================== */
 
-.section {
+    .section {
 
-  margin-top: 33px;
+      margin-top: 33px;
 
-  animation:
-    fadeUp .8s ease both;
+      animation:
+        fadeUp .8s ease both;
 
-}
+    }
 
 
-.section-heading {
+    .section-heading {
 
-  display: flex;
+      display: flex;
 
-  align-items: center;
+      align-items: center;
 
-  gap: 9px;
+      gap: 9px;
 
-  margin:
-    0
-    5px
-    13px;
+      margin:
+        0
+        5px
+        13px;
 
-  color: #51484A;
+      color: #51484A;
 
-  font-family:
-    "Playfair Display",
-    serif;
+      font-family:
+        "Playfair Display",
+        serif;
 
-  font-size: 17px;
+      font-size: 17px;
 
-  letter-spacing: .095em;
+      letter-spacing: .095em;
 
-  text-transform: uppercase;
+      text-transform: uppercase;
 
-}
+    }
 
 
-.section-heading .emoji {
+    .section-heading .emoji {
 
-  font-family: system-ui;
+      font-family: system-ui;
 
-  font-size: 18px;
+      font-size: 18px;
 
-  letter-spacing: 0;
+      letter-spacing: 0;
 
-}
+    }
 
 
-/* =====================================================
-   MUSIC CARD
-===================================================== */
+    /* =====================================================
+       MUSIC CARD
+    ====================================================== */
 
-.music-card {
+    .music-card {
 
-  position: relative;
+      position: relative;
 
-  display: flex;
+      display: flex;
 
-  align-items: center;
+      align-items: center;
 
-  width: 100%;
+      width: 100%;
 
-  min-height: 104px;
+      min-height: 104px;
 
-  padding: 12px;
+      padding: 12px;
 
-  /*
-     Leave room for the Spotify button
-  */
+      /*
+        Space for the Spotify button.
+      */
 
-  padding-right: 125px;
+      padding-right: 100px;
 
-  gap: 13px;
+      gap: 13px;
 
-  border:
-    1px
-    solid
-    var(--line);
+      border:
+        1px
+        solid
+        var(--line);
 
-  border-radius: 23px;
+      border-radius: 23px;
 
-  background:
-    rgba(255,252,249,.86);
+      background:
+        rgba(255,252,249,.86);
 
-  box-shadow:
-    0
-    12px
-    30px
-    rgba(73,57,59,.065);
+      box-shadow:
+        0
+        12px
+        30px
+        rgba(73,57,59,.065);
 
-  backdrop-filter:
-    blur(12px);
+      backdrop-filter:
+        blur(12px);
 
-  transition:
-    transform .22s ease,
-    box-shadow .22s ease;
+      transition:
+        transform .22s ease,
+        box-shadow .22s ease;
 
-}
+    }
 
 
-.music-card:hover {
+    .music-card:hover {
 
-  transform:
-    translateY(-2px);
+      transform:
+        translateY(-2px);
 
-  box-shadow:
-    0
-    17px
-    35px
-    rgba(73,57,59,.10);
+      box-shadow:
+        0
+        17px
+        35px
+        rgba(73,57,59,.10);
 
-}
+    }
 
 
-/* =====================================================
-   HEART
+    /* =====================================================
+       HEART
 
-   Stays at TOP RIGHT.
-   Completely separate from Spotify button.
-===================================================== */
+       Fixed to top-right.
+    ====================================================== */
 
-.music-card::after {
+    .music-card::after {
 
-  content: "♡";
+      content: "♡";
 
-  position: absolute;
+      position: absolute;
 
-  top: 9px;
+      top: 9px;
 
-  right: 12px;
+      right: 12px;
 
-  color:
-    rgba(102,80,91,.22);
+      color:
+        rgba(102,80,91,.22);
 
-  font-size: 20px;
+      font-size: 20px;
 
-  line-height: 1;
+      line-height: 1;
 
-  pointer-events: none;
+      pointer-events: none;
 
-}
+    }
 
 
-/* =====================================================
-   ALBUM
-===================================================== */
+    /* =====================================================
+       ALBUM ART
+    ====================================================== */
 
-.album {
+    .album {
 
-  position: relative;
+      position: relative;
 
-  flex:
-    0 0 75px;
+      flex:
+        0 0 75px;
 
-  width: 75px;
+      width: 75px;
 
-  height: 75px;
+      height: 75px;
 
-  border-radius: 17px;
+      border-radius: 17px;
 
-  overflow: hidden;
+      overflow: hidden;
 
-  background:
+      background:
 
-    radial-gradient(
-      circle at 68% 26%,
-      rgba(255,255,255,.48),
-      transparent 21%
-    ),
+        radial-gradient(
+          circle at 68% 26%,
+          rgba(255,255,255,.48),
+          transparent 21%
+        ),
 
-    linear-gradient(
-      145deg,
-      #D7C8BE,
-      #9D8787
-    );
+        linear-gradient(
+          145deg,
+          #D7C8BE,
+          #9D8787
+        );
 
-  box-shadow:
-    0
-    6px
-    16px
-    rgba(73,57,59,.11);
+      box-shadow:
+        0
+        6px
+        16px
+        rgba(73,57,59,.11);
 
-}
+    }
 
 
-.album.second {
+    .album.second {
 
-  background:
+      background:
 
-    radial-gradient(
-      circle at 70% 27%,
-      rgba(255,255,255,.48),
-      transparent 21%
-    ),
+        radial-gradient(
+          circle at 70% 27%,
+          rgba(255,255,255,.48),
+          transparent 21%
+        ),
 
-    linear-gradient(
-      145deg,
-      #DCC9C3,
-      #A47E87
-    );
+        linear-gradient(
+          145deg,
+          #DCC9C3,
+          #A47E87
+        );
 
-}
+    }
 
 
-.album::after {
+    .album::after {
 
-  content: "♫";
+      content: "♫";
 
-  position: absolute;
+      position: absolute;
 
-  inset: 0;
+      inset: 0;
 
-  display: grid;
+      display: grid;
 
-  place-items: center;
+      place-items: center;
 
-  color:
-    rgba(255,255,255,.91);
+      color:
+        rgba(255,255,255,.91);
 
-  font-family:
-    "Playfair Display",
-    serif;
+      font-family:
+        "Playfair Display",
+        serif;
 
-  font-size: 34px;
+      font-size: 34px;
 
-}
+    }
 
 
-/* =====================================================
-   MUSIC INFORMATION
-===================================================== */
+    /* =====================================================
+       MUSIC INFORMATION
+    ====================================================== */
 
-.music-info {
+    .music-info {
 
-  min-width: 0;
+      min-width: 0;
 
-  flex: 1;
+      flex: 1;
 
-  padding:
-    2px
-    0;
+      padding:
+        2px
+        0;
 
-}
+    }
 
 
-.music-title {
+    .music-title {
 
-  padding-right: 12px;
+      padding-right: 8px;
 
-  color:
-    var(--ink);
+      color:
+        var(--ink);
 
-  font-family:
-    "Playfair Display",
-    serif;
+      font-family:
+        "Playfair Display",
+        serif;
 
-  font-size: 17px;
+      font-size: 17px;
 
-  line-height: 1.25;
+      line-height: 1.25;
 
-  font-weight: 500;
+      font-weight: 500;
 
-  white-space: nowrap;
+      white-space: nowrap;
 
-  overflow: hidden;
+      overflow: hidden;
 
-  text-overflow: ellipsis;
+      text-overflow: ellipsis;
 
-}
+    }
 
 
-.music-description {
+    .music-description {
 
-  margin-top: 5px;
+      margin-top: 5px;
 
-  color:
-    #827579;
+      color:
+        #827579;
 
-  font-family:
-    "Caveat",
-    cursive;
+      font-family:
+        "Caveat",
+        cursive;
 
-  font-size: 17px;
+      font-size: 17px;
 
-  line-height: 1.05;
+      line-height: 1.05;
 
-  white-space: nowrap;
+      white-space: nowrap;
 
-  overflow: hidden;
+      overflow: hidden;
 
-  text-overflow: ellipsis;
+      text-overflow: ellipsis;
 
-}
+    }
 
 
-/* =====================================================
-   WAVEFORM
-===================================================== */
+    /* =====================================================
+       WAVEFORM
+    ====================================================== */
 
-.wave {
+    .wave {
 
-  display: flex;
+      display: flex;
 
-  align-items: center;
+      align-items: center;
 
-  gap: 3px;
+      gap: 3px;
 
-  height: 16px;
+      height: 16px;
 
-  margin-top: 8px;
+      margin-top: 8px;
 
-}
+    }
 
 
-.wave span {
+    .wave span {
 
-  width: 3px;
+      width: 3px;
 
-  border-radius: 4px;
+      border-radius: 4px;
 
-  background:
-    var(--champagne);
+      background:
+        var(--champagne);
 
-  opacity: .65;
+      opacity: .65;
 
-}
+    }
 
 
-.wave span:nth-child(1) {
-  height: 5px;
-}
+    .wave span:nth-child(1) {
+      height: 5px;
+    }
 
-.wave span:nth-child(2) {
-  height: 11px;
-}
+    .wave span:nth-child(2) {
+      height: 11px;
+    }
 
-.wave span:nth-child(3) {
-  height: 16px;
-}
+    .wave span:nth-child(3) {
+      height: 16px;
+    }
 
-.wave span:nth-child(4) {
-  height: 8px;
-}
+    .wave span:nth-child(4) {
+      height: 8px;
+    }
 
-.wave span:nth-child(5) {
-  height: 13px;
-}
+    .wave span:nth-child(5) {
+      height: 13px;
+    }
 
-.wave span:nth-child(6) {
-  height: 6px;
-}
+    .wave span:nth-child(6) {
+      height: 6px;
+    }
 
-.wave span:nth-child(7) {
-  height: 12px;
-}
+    .wave span:nth-child(7) {
+      height: 12px;
+    }
 
-.wave span:nth-child(8) {
-  height: 15px;
-}
+    .wave span:nth-child(8) {
+      height: 15px;
+    }
 
-.wave span:nth-child(9) {
-  height: 7px;
-}
+    .wave span:nth-child(9) {
+      height: 7px;
+    }
 
 
-/* =====================================================
-   SPOTIFY BUTTON
+    /* =====================================================
+       SPOTIFY BUTTON
 
-   THIS IS NOW:
+       FINAL POSITION:
+       - 43px from right
+       - 4px below vertical center
 
-   - vertically centered
-   - moved LEFT from the edge
-   - far enough from heart
-   - identical on both cards
-===================================================== */
+       This is the placement from your latest screenshot
+       adjusted toward the right and slightly downward.
+    ====================================================== */
 
-.spotify {
+    .spotify {
 
-  position: absolute;
+      position: absolute;
 
-  /*
-     This is the important part.
+      right: 43px;
 
-     68px from the right edge gives the button
-     breathing room from the heart.
-  */
+      top: calc(50% + 4px);
 
-  right: 68px;
+      width: 45px;
 
-  top: 50%;
+      height: 45px;
 
-  width: 45px;
+      padding: 0;
 
-  height: 45px;
+      margin: 0;
 
-  padding: 0;
+      display: flex;
 
-  margin: 0;
+      align-items: center;
 
-  display: flex;
+      justify-content: center;
 
-  align-items: center;
+      border: none;
 
-  justify-content: center;
+      border-radius: 50%;
 
-  border: none;
+      background:
+        var(--plum);
 
-  border-radius: 50%;
+      box-shadow:
+        0
+        7px
+        17px
+        rgba(85,64,75,.22);
 
-  background:
-    var(--plum);
+      transform:
+        translateY(-50%);
 
-  box-shadow:
-    0
-    7px
-    17px
-    rgba(85,64,75,.22);
+      z-index: 5;
 
-  transform:
-    translateY(-50%);
+      transition:
+        transform .2s ease,
+        background .2s ease,
+        box-shadow .2s ease;
 
-  z-index: 5;
+    }
 
-  transition:
-    transform .2s ease,
-    background .2s ease,
-    box-shadow .2s ease;
 
-}
+    .spotify:hover {
 
+      transform:
+        translateY(-50%)
+        scale(1.06);
 
-.spotify:hover {
+      background:
+        var(--plum-dark);
 
-  transform:
-    translateY(-50%)
-    scale(1.06);
+      box-shadow:
+        0
+        9px
+        22px
+        rgba(85,64,75,.30);
 
-  background:
-    var(--plum-dark);
+    }
 
-  box-shadow:
-    0
-    9px
-    22px
-    rgba(85,64,75,.30);
 
-}
+    /* =====================================================
+       SPOTIFY ICON
+    ====================================================== */
 
+    .spotify-icon {
 
-/* =====================================================
-   SPOTIFY ICON
+      position: absolute;
 
-   EXACT CENTER OF BUTTON
-===================================================== */
+      left: 50%;
 
-.spotify-icon {
+      top: 50%;
 
-  position: absolute;
+      width: 24px;
 
-  left: 50%;
+      height: 24px;
 
-  top: 50%;
+      display: flex;
 
-  width: 24px;
+      align-items: center;
 
-  height: 24px;
+      justify-content: center;
 
-  display: flex;
+      transform:
+        translate(-50%, -50%);
 
-  align-items: center;
+      line-height: 0;
 
-  justify-content: center;
+    }
 
-  transform:
-    translate(-50%, -50%);
 
-  line-height: 0;
+    .spotify-icon svg {
 
-}
+      display: block;
 
+      width: 24px;
 
-.spotify-icon svg {
+      height: 24px;
 
-  display: block;
+      margin: 0;
 
-  width: 24px;
+      padding: 0;
 
-  height: 24px;
+    }
 
-  margin: 0;
 
-  padding: 0;
+    /* =====================================================
+       BOTTOM NOTE
+    ====================================================== */
 
-}
+    .bottom-note {
 
+      width: 145px;
 
-/* =====================================================
-   BOTTOM NOTE
-===================================================== */
+      margin:
+        44px
+        0
+        0
+        auto;
 
-.bottom-note {
+      padding:
+        13px
+        14px;
 
-  width: 145px;
+      background:
+        #EFE1DD;
 
-  margin:
-    44px
-    0
-    0
-    auto;
+      color:
+        #796B6E;
 
-  padding:
-    13px
-    14px;
+      font-family:
+        "Caveat",
+        cursive;
 
-  background:
-    #EFE1DD;
+      font-size: 19px;
 
-  color:
-    #796B6E;
+      line-height: 1.05;
 
-  font-family:
-    "Caveat",
-    cursive;
+      text-align: center;
 
-  font-size: 19px;
+      transform:
+        rotate(4deg);
 
-  line-height: 1.05;
+      box-shadow:
+        0
+        9px
+        23px
+        rgba(70,50,55,.055);
 
-  text-align: center;
+    }
 
-  transform:
-    rotate(4deg);
 
-  box-shadow:
-    0
-    9px
-    23px
-    rgba(70,50,55,.055);
+    /* =====================================================
+       FOOTER
+    ====================================================== */
 
-}
+    footer {
 
+      padding-top: 42px;
 
-/* =====================================================
-   FOOTER
-===================================================== */
+      text-align: center;
 
-footer {
+      color:
+        #928588;
 
-  padding-top: 42px;
+      font-family:
+        "Playfair Display",
+        serif;
 
-  text-align: center;
+      font-size: 21px;
 
-  color:
-    #928588;
+    }
 
-  font-family:
-    "Playfair Display",
-    serif;
 
-  font-size: 21px;
+    /* =====================================================
+       MOBILE
+    ====================================================== */
 
-}
+    @media (max-width: 430px) {
 
 
-/* =====================================================
-   MOBILE
-===================================================== */
+      .page {
 
-@media (max-width: 430px) {
+        width:
+          calc(100% - 22px);
 
+        padding:
+          22px
+          0
+          45px;
 
-  .page {
+      }
 
-    width:
-      calc(100% - 22px);
 
-    padding:
-      22px
-      0
-      45px;
+      .paper-note {
 
-  }
+        top: 14px;
 
+        left: -9px;
 
-  .paper-note {
+        width: 104px;
 
-    top: 14px;
+        padding: 12px;
 
-    left: -9px;
+        font-size: 17px;
 
-    width: 104px;
+      }
 
-    padding: 12px;
 
-    font-size: 17px;
+      .flowers {
 
-  }
+        top: 9px;
 
+        right: -11px;
 
-  .flowers {
+        font-size: 27px;
 
-    top: 9px;
+      }
 
-    right: -11px;
 
-    font-size: 27px;
+      .hero {
 
-  }
+        padding-top:
+          108px;
 
+      }
 
-  .hero {
 
-    padding-top:
-      108px;
+      .headphones {
 
-  }
+        width: 61px;
 
+        height: 61px;
 
-  .headphones {
+        font-size: 27px;
 
-    width: 61px;
+      }
 
-    height: 61px;
 
-    font-size: 27px;
+      .hero h1 {
 
-  }
+        font-size: 52px;
 
+      }
 
-  .hero h1 {
 
-    font-size: 52px;
+      .hero-text {
 
-  }
+        max-width: 320px;
 
+        font-size: 13.5px;
 
-  .hero-text {
+      }
 
-    max-width: 320px;
 
-    font-size: 13.5px;
+      .divider {
 
-  }
+        margin:
+          27px
+          auto
+          33px;
 
+      }
 
-  .divider {
 
-    margin:
-      27px
-      auto
-      33px;
+      .divider::before,
+      .divider::after {
 
-  }
+        width: 65px;
 
+      }
 
-  .divider::before,
-  .divider::after {
 
-    width: 65px;
+      .section {
 
-  }
+        margin-top: 30px;
 
+      }
 
-  .section {
 
-    margin-top: 30px;
+      .section-heading {
 
-  }
+        font-size: 15px;
 
+        letter-spacing: .075em;
 
-  .section-heading {
+      }
 
-    font-size: 15px;
 
-    letter-spacing: .075em;
+      /* =========================
+         CARD
+      ========================== */
 
-  }
+      .music-card {
 
+        min-height: 96px;
 
-  /* =================================================
-     MOBILE CARD
-  ================================================= */
+        padding: 10px;
 
-  .music-card {
+        padding-right: 88px;
 
-    min-height: 96px;
+        gap: 11px;
 
-    padding: 10px;
+        border-radius: 21px;
 
-    /*
-       Bigger reserved space because the button
-       is intentionally moved toward the middle.
-    */
+      }
 
-    padding-right: 115px;
 
-    gap: 11px;
+      /* =========================
+         ALBUM
+      ========================== */
 
-    border-radius: 21px;
+      .album {
 
-  }
+        flex:
+          0
+          0
+          69px;
 
+        width: 69px;
 
-  /* album */
+        height: 69px;
 
-  .album {
+        border-radius: 16px;
 
-    flex:
-      0
-      0
-      69px;
+      }
 
-    width: 69px;
 
-    height: 69px;
+      /* =========================
+         TEXT
+      ========================== */
 
-    border-radius: 16px;
+      .music-title {
 
-  }
+        font-size: 15px;
 
+      }
 
-  /* text */
 
-  .music-title {
+      .music-description {
 
-    font-size: 15px;
+        font-size: 15.5px;
 
-  }
+      }
 
 
-  .music-description {
+      .wave {
 
-    font-size: 15.5px;
+        margin-top: 6px;
 
-  }
+      }
 
 
-  .wave {
+      /* =========================
+         SPOTIFY
 
-    margin-top: 6px;
+         43px from right
+         4px lower
+      ========================== */
 
-  }
+      .spotify {
 
+        right: 43px;
 
-  /* =================================================
-     MOBILE SPOTIFY BUTTON
-  ================================================= */
+        top: calc(50% + 4px);
 
-  .spotify {
+        width: 42px;
 
-    /*
-       57px from the right.
+        height: 42px;
 
-       This moves it LEFT enough to visually
-       separate it from the heart.
-    */
+      }
 
-    right: 57px;
 
-    width: 42px;
+      .spotify-icon {
 
-    height: 42px;
+        width: 22px;
 
-  }
+        height: 22px;
 
+      }
 
-  .spotify-icon {
 
-    width: 22px;
+      .spotify-icon svg {
 
-    height: 22px;
+        width: 22px;
 
-  }
+        height: 22px;
 
+      }
 
-  .spotify-icon svg {
 
-    width: 22px;
+      .bottom-note {
 
-    height: 22px;
+        width: 138px;
 
-  }
+        margin-top: 38px;
 
+      }
 
-  .bottom-note {
+    }
 
-    width: 138px;
 
-    margin-top: 38px;
+    /* =====================================================
+       SMALL PHONES
+    ====================================================== */
 
-  }
+    @media (max-width: 360px) {
 
-}
 
+      .page {
 
-/* =====================================================
-   SMALL PHONES
-===================================================== */
+        width:
+          calc(100% - 18px);
 
-@media (max-width: 360px) {
+      }
 
 
-  .page {
+      .paper-note {
 
-    width:
-      calc(100% - 18px);
+        left: -13px;
 
-  }
+      }
 
 
-  .paper-note {
+      .flowers {
 
-    left: -13px;
+        right: -17px;
 
-  }
+      }
 
 
-  .flowers {
+      .hero h1 {
 
-    right: -17px;
+        font-size: 48px;
 
-  }
+      }
 
 
-  .hero h1 {
+      .music-card {
 
-    font-size: 48px;
+        gap: 9px;
 
-  }
+        padding-right: 82px;
 
+      }
 
-  .music-card {
 
-    gap: 9px;
+      .album {
 
-    padding-right: 105px;
+        flex-basis: 64px;
 
-  }
+        width: 64px;
 
+        height: 64px;
 
-  .album {
+      }
 
-    flex-basis: 64px;
 
-    width: 64px;
+      .music-title {
 
-    height: 64px;
+        font-size: 14px;
 
-  }
+      }
 
 
-  .music-title {
+      .music-description {
 
-    font-size: 14px;
+        font-size: 14px;
 
-  }
+      }
 
 
-  .music-description {
+      .spotify {
 
-    font-size: 14px;
+        right: 38px;
 
-  }
+        top: calc(50% + 4px);
 
+        width: 40px;
 
-  .spotify {
+        height: 40px;
 
-    right: 51px;
+      }
 
-    width: 40px;
 
-    height: 40px;
+      .spotify-icon {
 
-  }
+        width: 21px;
 
+        height: 21px;
 
-  .spotify-icon {
+      }
 
-    width: 21px;
 
-    height: 21px;
+      .spotify-icon svg {
 
-  }
+        width: 21px;
 
+        height: 21px;
 
-  .spotify-icon svg {
+      }
 
-    width: 21px;
+    }
 
-    height: 21px;
 
-  }
+    /* =====================================================
+       ANIMATION
+    ====================================================== */
 
-}
+    @keyframes fadeUp {
 
+      from {
 
-/* =====================================================
-   ANIMATION
-===================================================== */
+        opacity: 0;
 
-@keyframes fadeUp {
+        transform:
+          translateY(12px);
 
-  from {
+      }
 
-    opacity: 0;
+      to {
 
-    transform:
-      translateY(12px);
+        opacity: 1;
 
-  }
+        transform:
+          translateY(0);
 
-  to {
+      }
 
-    opacity: 1;
+    }
 
-    transform:
-      translateY(0);
-
-  }
-
-}
-
-</style>
+  </style>
 
 </head>
 
@@ -1382,370 +1373,370 @@ footer {
 <main class="page">
 
 
-<!-- =====================================================
-     TOP NOTE
-====================================================== -->
+  <!-- =================================================
+       PAPER NOTE
+  ================================================== -->
 
-<div class="paper-note">
+  <div class="paper-note">
 
-  a little<br>
-  music<br>
-  for you
+    a little<br>
+    music<br>
+    for you
 
-  <span>
-    ♡
-  </span>
+    <span>
+      ♡
+    </span>
 
-</div>
-
-
-<!-- FLOWERS -->
-
-<div class="flowers">
-
-  ❀
-
-  <small>
-    ✿
-  </small>
-
-</div>
+  </div>
 
 
+  <!-- FLOWERS -->
 
-<!-- =====================================================
-     HERO
-====================================================== -->
+  <div class="flowers">
 
-<header class="hero">
+    ❀
+
+    <small>
+      ✿
+    </small>
+
+  </div>
 
 
-  <div class="headphones">
+
+  <!-- =================================================
+       HERO
+  ================================================== -->
+
+  <header class="hero">
+
+
+    <div class="headphones">
+      ♡
+    </div>
+
+
+    <h1>
+      For <em>Taara</em>
+    </h1>
+
+
+    <p class="hero-text">
+
+      some songs that made me think of you.<br>
+
+      and some that just sound like you.
+
+    </p>
+
+
+  </header>
+
+
+
+  <!-- DIVIDER -->
+
+  <div class="divider">
     ♡
   </div>
 
 
-  <h1>
-    For <em>Taara</em>
-  </h1>
+
+  <!-- =================================================
+       PLAYLIST 1
+  ================================================== -->
+
+  <section class="section">
 
 
-  <p class="hero-text">
+    <h2 class="section-heading">
 
-    some songs that made me think of you.<br>
-
-    and some that just sound like you.
-
-  </p>
-
-
-</header>
-
-
-
-<!-- DIVIDER -->
-
-<div class="divider">
-  ♡
-</div>
-
-
-
-<!-- =====================================================
-     PLAYLIST 1
-====================================================== -->
-
-<section class="section">
-
-
-  <h2 class="section-heading">
-
-    <span class="emoji">
-      🤍
-    </span>
-
-    These remind me of you
-
-  </h2>
-
-
-  <a
-    class="music-card"
-
-    href="https://open.spotify.com/playlist/4NOPqOwIbdfL8w1OxM9pPs"
-
-    target="_blank"
-
-    rel="noopener noreferrer"
-  >
-
-
-    <!-- ALBUM -->
-
-    <div class="album"></div>
-
-
-    <!-- TEXT -->
-
-    <div class="music-info">
-
-
-      <div class="music-title">
-        Reminds Me of You♡
-      </div>
-
-
-      <div class="music-description">
-        songs that make me think of you
-      </div>
-
-
-      <div class="wave">
-
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-
-      </div>
-
-
-    </div>
-
-
-    <!-- SPOTIFY -->
-
-    <div class="spotify">
-
-      <span class="spotify-icon">
-
-        <svg
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
-        >
-
-          <circle
-            cx="12"
-            cy="12"
-            r="10"
-            fill="#FFFFFF"
-          />
-
-
-          <path
-            d="M7.25 9.35
-               C10.30 8.42
-               14.12 8.57
-               17.05 9.95"
-            fill="none"
-            stroke="#66505B"
-            stroke-width="1.55"
-            stroke-linecap="round"
-          />
-
-
-          <path
-            d="M7.70 12.25
-               C10.20 11.52
-               13.55 11.70
-               15.95 12.78"
-            fill="none"
-            stroke="#66505B"
-            stroke-width="1.45"
-            stroke-linecap="round"
-          />
-
-
-          <path
-            d="M8.30 15.05
-               C10.32 14.58
-               12.78 14.70
-               14.65 15.50"
-            fill="none"
-            stroke="#66505B"
-            stroke-width="1.35"
-            stroke-linecap="round"
-          />
-
-        </svg>
-
+      <span class="emoji">
+        🤍
       </span>
 
-    </div>
+      These remind me of you
+
+    </h2>
 
 
-  </a>
+    <a
+      class="music-card"
+
+      href="https://open.spotify.com/playlist/4NOPqOwIbdfL8w1OxM9pPs"
+
+      target="_blank"
+
+      rel="noopener noreferrer"
+    >
 
 
-</section>
+      <!-- ALBUM -->
+
+      <div class="album"></div>
 
 
+      <!-- INFORMATION -->
 
-<!-- =====================================================
-     PLAYLIST 2
-====================================================== -->
-
-<section class="section">
+      <div class="music-info">
 
 
-  <h2 class="section-heading">
-
-    <span class="emoji">
-      🌼
-    </span>
-
-    Very Taara
-
-  </h2>
+        <div class="music-title">
+          Reminds Me of You♡
+        </div>
 
 
-  <a
-    class="music-card"
-
-    href="https://open.spotify.com/playlist/0m9MUBTC2tcGojcFkEGVoW"
-
-    target="_blank"
-
-    rel="noopener noreferrer"
-  >
+        <div class="music-description">
+          songs that make me think of you
+        </div>
 
 
-    <!-- ALBUM -->
+        <div class="wave">
 
-    <div class="album second"></div>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
 
+        </div>
 
-    <!-- TEXT -->
-
-    <div class="music-info">
-
-
-      <div class="music-title">
-        Veryyy TaaraaaLikee
-      </div>
-
-
-      <div class="music-description">
-        songs that just feel like you
-      </div>
-
-
-      <div class="wave">
-
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
 
       </div>
 
 
-    </div>
+      <!-- SPOTIFY BUTTON -->
+
+      <div class="spotify">
+
+        <span class="spotify-icon">
+
+          <svg
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+
+            <circle
+              cx="12"
+              cy="12"
+              r="10"
+              fill="#FFFFFF"
+            />
 
 
-    <!-- SPOTIFY -->
-
-    <div class="spotify">
-
-      <span class="spotify-icon">
-
-        <svg
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
-        >
-
-          <circle
-            cx="12"
-            cy="12"
-            r="10"
-            fill="#FFFFFF"
-          />
+            <path
+              d="M7.25 9.35
+                 C10.30 8.42
+                 14.12 8.57
+                 17.05 9.95"
+              fill="none"
+              stroke="#66505B"
+              stroke-width="1.55"
+              stroke-linecap="round"
+            />
 
 
-          <path
-            d="M7.25 9.35
-               C10.30 8.42
-               14.12 8.57
-               17.05 9.95"
-            fill="none"
-            stroke="#66505B"
-            stroke-width="1.55"
-            stroke-linecap="round"
-          />
+            <path
+              d="M7.70 12.25
+                 C10.20 11.52
+                 13.55 11.70
+                 15.95 12.78"
+              fill="none"
+              stroke="#66505B"
+              stroke-width="1.45"
+              stroke-linecap="round"
+            />
 
 
-          <path
-            d="M7.70 12.25
-               C10.20 11.52
-               13.55 11.70
-               15.95 12.78"
-            fill="none"
-            stroke="#66505B"
-            stroke-width="1.45"
-            stroke-linecap="round"
-          />
+            <path
+              d="M8.30 15.05
+                 C10.32 14.58
+                 12.78 14.70
+                 14.65 15.50"
+              fill="none"
+              stroke="#66505B"
+              stroke-width="1.35"
+              stroke-linecap="round"
+            />
+
+          </svg>
+
+        </span>
+
+      </div>
 
 
-          <path
-            d="M8.30 15.05
-               C10.32 14.58
-               12.78 14.70
-               14.65 15.50"
-            fill="none"
-            stroke="#66505B"
-            stroke-width="1.35"
-            stroke-linecap="round"
-          />
+    </a>
 
-        </svg>
 
+  </section>
+
+
+
+  <!-- =================================================
+       PLAYLIST 2
+  ================================================== -->
+
+  <section class="section">
+
+
+    <h2 class="section-heading">
+
+      <span class="emoji">
+        🌼
       </span>
 
-    </div>
+      Very Taara
+
+    </h2>
 
 
-  </a>
+    <a
+      class="music-card"
+
+      href="https://open.spotify.com/playlist/0m9MUBTC2tcGojcFkEGVoW"
+
+      target="_blank"
+
+      rel="noopener noreferrer"
+    >
 
 
-</section>
+      <!-- ALBUM -->
+
+      <div class="album second"></div>
+
+
+      <!-- INFORMATION -->
+
+      <div class="music-info">
+
+
+        <div class="music-title">
+          Veryyy TaaraaaLikee
+        </div>
+
+
+        <div class="music-description">
+          songs that just feel like you
+        </div>
+
+
+        <div class="wave">
+
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+
+        </div>
+
+
+      </div>
+
+
+      <!-- SPOTIFY BUTTON -->
+
+      <div class="spotify">
+
+        <span class="spotify-icon">
+
+          <svg
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+
+            <circle
+              cx="12"
+              cy="12"
+              r="10"
+              fill="#FFFFFF"
+            />
+
+
+            <path
+              d="M7.25 9.35
+                 C10.30 8.42
+                 14.12 8.57
+                 17.05 9.95"
+              fill="none"
+              stroke="#66505B"
+              stroke-width="1.55"
+              stroke-linecap="round"
+            />
+
+
+            <path
+              d="M7.70 12.25
+                 C10.20 11.52
+                 13.55 11.70
+                 15.95 12.78"
+              fill="none"
+              stroke="#66505B"
+              stroke-width="1.45"
+              stroke-linecap="round"
+            />
+
+
+            <path
+              d="M8.30 15.05
+                 C10.32 14.58
+                 12.78 14.70
+                 14.65 15.50"
+              fill="none"
+              stroke="#66505B"
+              stroke-width="1.35"
+              stroke-linecap="round"
+            />
+
+          </svg>
+
+        </span>
+
+      </div>
+
+
+    </a>
+
+
+  </section>
 
 
 
-<!-- =====================================================
-     BOTTOM NOTE
-====================================================== -->
+  <!-- =================================================
+       BOTTOM NOTE
+  ================================================== -->
 
-<div class="bottom-note">
+  <div class="bottom-note">
 
-  good music,<br>
+    good music,<br>
 
-  brighter days,<br>
+    brighter days,<br>
 
-  with you ♡
+    with you ♡
 
-</div>
+  </div>
 
 
 
-<!-- FOOTER -->
+  <!-- FOOTER -->
 
-<footer>
+  <footer>
 
-  PB ♡
+    PB ♡
 
-</footer>
+  </footer>
 
 
 </main>
